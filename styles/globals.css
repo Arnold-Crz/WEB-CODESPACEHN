@@ -1,16 +1,54 @@
-html,
+html {
+  margin: 0 auto;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  font-size: calc(14px + (16 - 14) * ((100vw - 300px) / (1200 - 300)));
+  max-width: 1200px;
+  min-width: 360px;
+  width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+footer {
+  max-width: 1440px;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
 body {
-  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  padding: 0;
+  background-color: #f2f6f7;
 }
 
 a {
-  color: inherit;
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
+li {
+  list-style: none;
+}
+
+button {
+  outline: none;
+  border: none;
+}
+
+input {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
 }
