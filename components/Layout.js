@@ -8,10 +8,6 @@ function Layout({ children, title }) {
         <title>
           Desarrollo Web Profesional {title ? `| ${title}` : 'inicio'}
         </title>
-        <link
-          href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
-          rel="stylesheet"
-        ></link>
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta

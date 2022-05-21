@@ -24,8 +24,8 @@ function Navbar() {
   return (
     <Header>
       <nav>
-        <div>
-          <Image src={icon} alt="icon" />
+        <div className="img_logo">
+          <Image src={icon} alt="icon" width={50} height={50} />
         </div>
         <MenuCenter>
           <ul className={click ? 'active' : ''}>
@@ -55,7 +55,7 @@ function Navbar() {
 
 const Header = styled.header`
   position: fixed;
-  margin-top: 40px;
+  margin-top: 20px;
   top: 0;
   left: 0;
   width: 100%;
@@ -66,7 +66,7 @@ const Header = styled.header`
     background-color: ${C.COLOR_BLANCO};
     border-radius: 15px;
     width: 80%;
-    height: 70px;
+    height: 50px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -79,6 +79,12 @@ const Header = styled.header`
       bottom: 0;
       width: 100%;
       border-radius: 0;
+    }
+
+    .img_logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
 `;
