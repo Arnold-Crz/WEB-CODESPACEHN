@@ -14,8 +14,6 @@ const MenuHamburguesa = ({ click, handleClick }) => {
   );
 };
 
-export default MenuHamburguesa;
-
 const Hamburguesa = styled.div`
   margin-right: 10px;
   .nav-icon-5 {
@@ -69,3 +67,5 @@ const Hamburguesa = styled.div`
     top: 13px;
   }
 `;
+
+export default MenuHamburguesa;

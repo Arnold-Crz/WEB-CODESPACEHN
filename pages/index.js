@@ -1,7 +1,12 @@
-import Head from 'next/head';
-import Image from 'next/image';
+import Layout from '../components/Layout';
 import Inicio from '../components/Inicio/Inicio';
+import Servicios from '../components/servicios/Servicios';
 
-export default function Home() {
-  return <Inicio />;
+export default function App() {
+  return (
+    <Layout title="Principal">
+      <Inicio />
+      <Servicios />
+    </Layout>
+  );
 }
