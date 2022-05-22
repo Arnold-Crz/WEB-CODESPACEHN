@@ -64,18 +64,16 @@ function Inicio() {
 }
 
 const Wrappersection = styled.section`
-  width: 100%;
-  margin: 20px auto;
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-content: center;
   align-items: center;
   gap: 40px;
 
   @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
-    width: 90%;
   }
 
   .wrapperleft {
