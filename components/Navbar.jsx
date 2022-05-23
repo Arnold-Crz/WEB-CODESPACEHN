@@ -4,8 +4,6 @@ import { useState } from 'react';
 import styled from 'styled-components';
 import * as C from '../styles/variables';
 
-import icon from '../public/img/iconcodespace.svg';
-
 import MenuHamburguesa from './MenuHamburguesa';
 
 function Navbar() {
@@ -25,7 +23,7 @@ function Navbar() {
     <Header>
       <nav>
         <div className="img_logo">
-          <Image src={icon} alt="icon" width={50} height={50} />
+          <Image src="/logocodespace.svg" alt="icon" width={60} height={60} />
         </div>
         <MenuCenter>
           <ul className={click ? 'active' : ''}>
@@ -37,7 +35,7 @@ function Navbar() {
           </ul>
         </MenuCenter>
         <MenuSocial>
-          <a href="https://api.whatsapp.com/send/?phone=50433038039&text=Hola Buen dia. estoy interes@ en trabajar juntos en un proyecto.">
+          <a href="https://api.whatsapp.com/send/?phone=50433038039&text=👋Hola Buen dia. Estoy interes@ en trabajar juntos, en un proyecto. 🚀">
             <i className="bx bxl-whatsapp"></i>
           </a>
           <a href="https://www.facebook.com/codespacehn/">

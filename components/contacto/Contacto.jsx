@@ -18,14 +18,16 @@ function Contacto() {
                   className="bx bxs-envelope"
                   style={{ color: '#fffcfc', fontSize: '1.5rem' }}
                 ></i>
-                <p>codespacehn@gmail.com</p>
+                <a href="mailto:codespacehn@gmail.com?subject=El Asunto&body=Mensaje">
+                  codespacehn@gmail.com
+                </a>
               </div>
               <div>
                 <i
                   className="bx bxs-phone"
                   style={{ color: '#fffcfc', fontSize: '1.5rem' }}
                 ></i>
-                <p>+504 3303-8039</p>
+                <a href="tel:3303-8039">+504 3303-8039</a>
               </div>
               <div>
                 <i
@@ -46,7 +48,9 @@ function Contacto() {
                   className="bx bxl-whatsapp"
                   style={{ color: '#fffcfc', fontSize: '1.5rem' }}
                 ></i>
-                <p>+504 3303-8039</p>
+                <a href="https://api.whatsapp.com/send/?phone=50433038039&text=👋Hola Buen dia. Estoy interes@ en trabajar juntos, en un proyecto. 🚀">
+                  +504 3303-8039
+                </a>
               </div>
             </div>
           </div>
@@ -107,6 +111,7 @@ const Wrapper = styled.div`
           grid-template-columns: 20px 1fr;
           column-gap: 10px;
 
+          a,
           p {
             color: ${C.COLOR_BLANCO};
           }

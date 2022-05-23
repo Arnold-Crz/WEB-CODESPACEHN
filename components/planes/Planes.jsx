@@ -13,7 +13,9 @@ function Planes() {
         {PLANES_DATA.map(
           ({ id, titulo, subtitulo, boton, link, beneficios }) => (
             <div key={id}>
-              <h2>{titulo}</h2>
+              <h2 title="Hosting y Dominio tienen un costo adicional">
+                {titulo}
+              </h2>
               <p>{subtitulo}</p>
               <div>
                 <a href={link}>{boton}</a>
@@ -65,6 +67,7 @@ const WrapperCards = styled.div`
       z-index: 1;
       margin-top: 10px;
       margin-bottom: 50px;
+      cursor: zoom-in;
       @media screen and (min-width: 600px) {
         font-size: 1.8rem;
       }

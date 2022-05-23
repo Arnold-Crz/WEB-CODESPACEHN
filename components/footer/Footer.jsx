@@ -24,7 +24,8 @@ function Footer() {
         <div className="wrapper_item_servicios">
           <h3>Servicios</h3>
           <ul>
-            <li>Páginas de Servicios y Blog</li>
+            <li>Páginas de Servicios</li>
+            <li>Blog Informativos</li>
             <li>Landing Pages</li>
             <li>Administrador y Desarollador de Páginas Webs</li>
             <li>Adminitrador de CMS</li>
@@ -37,11 +38,11 @@ function Footer() {
           <div>
             <div>
               <p>Correo</p>
-              <p>arnoldcrzdev@gmail.com</p>
+              <a href="mailto:arnoldcrzdev@gmail.com">arnoldcrzdev@gmail.com</a>
             </div>
             <div>
               <p>Telefono/Whatsapp</p>
-              <p>+504 3303-8039</p>
+              <a href="tel:3303-8039">+504 3303-8039</a>
             </div>
           </div>
         </div>
@@ -68,8 +69,10 @@ function Footer() {
 }
 
 const Wrapperfooter = styled.footer`
+  position: absolute;
   width: 100%;
-  min-height: 50vh;
+  left: 0;
+  right: 0;
   background-color: ${C.COLOR_NEGRO};
   display: grid;
   grid-template-columns: 300px;
@@ -102,18 +105,17 @@ const Wrapperfooter = styled.footer`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    @media screen and (min-width: 600px) {
+    @media screen and (min-width: 768px) {
       width: 100%;
       display: grid;
       column-gap: 40px;
-      grid-template-columns: 350px 300px 200px 100px;
+      grid-template-columns: 400px 350px 200px 200px;
       margin-bottom: 20px;
     }
 
     .wrapper_item_nosotros {
       margin-top: 20px;
       width: 100%;
-      margin-bottom: 30px;
       h3 {
         font-size: 1.8rem;
         color: ${C.COLOR_BLANCO};
@@ -140,6 +142,10 @@ const Wrapperfooter = styled.footer`
       li {
         font-size: 1rem;
         color: ${C.COLOR_BLANCO};
+
+        ::marker {
+          color: ${C.COLOR_NARANJA};
+        }
       }
       @media screen and (min-width: 600px) {
         display: grid;
@@ -160,7 +166,7 @@ const Wrapperfooter = styled.footer`
           font-size: 1.2rem;
           color: ${C.COLOR_BLANCO};
         }
-        p:nth-of-type(2) {
+        a {
           font-size: 1rem;
           color: ${C.COLOR_BLANCO};
         }

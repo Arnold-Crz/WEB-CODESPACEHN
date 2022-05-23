@@ -10,6 +10,16 @@ html {
   scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+  width: 15px;
+  background-color: #dbdbdb;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #fc9918;
+  border-radius: 50px;
+}
+
 footer {
   max-width: 1440px;
 }
@@ -26,10 +36,6 @@ body {
 
 a {
   text-decoration: none;
-}
-
-li {
-  list-style: none;
 }
 
 button {
