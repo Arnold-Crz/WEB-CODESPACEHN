@@ -12,7 +12,7 @@ function Tech() {
   return (
     <Wrapper>
       <h2>
-        Tecnologias con las que <span>trabajamos</span>
+        Tecnologías con las que <span>trabajamos</span>
       </h2>
       <Swiper
         spaceBetween={20}

@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Footer from './footer/Footer';
 import Navbar from './Navbar';
 
 function Layout({ children, title }) {
@@ -17,6 +18,7 @@ function Layout({ children, title }) {
       </Head>
       <Navbar />
       {children}
+      <Footer />
     </>
   );
 }
