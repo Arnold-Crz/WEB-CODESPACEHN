@@ -7,13 +7,11 @@ const useObserver = () => {
     let observer;
     const callback = (entries) => {
       entries.forEach((entry) => {
-        const navElement = document.querySelector(
+        let navElement = document.querySelector(
           `a[href="#${entry.target.id}"]`
         );
-        if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
-          if (!navElement.classList.contains('active')) {
-            navElement.classList.add('active');
-          }
+        if (entry.isIntersecting && !navElement.classList.contains('active')) {
+          navElement.classList.add('active');
         } else {
           if (navElement.classList.contains('active')) {
             navElement.classList.remove('active');
@@ -23,13 +21,13 @@ const useObserver = () => {
     };
 
     const options = {
-      threshold: 0.55,
+      rootMargin: '0px 0px 0px -100px',
     };
 
     observer = new IntersectionObserver(callback, options);
 
     observer.observe(refObserver.current);
-  }, [refObserver]);
+  });
 
   return refObserver;
 };

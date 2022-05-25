@@ -97,6 +97,9 @@ const MenuCenter = styled.div`
       &:hover {
         color: ${C.COLOR_NARANJA};
       }
+      &.active {
+        color: ${C.COLOR_NARANJA};
+      }
     }
   }
   @media (max-width: 768px) {

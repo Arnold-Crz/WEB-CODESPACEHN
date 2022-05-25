@@ -3,9 +3,12 @@ import TitleSection from '../TitleSection';
 import * as C from '../../styles/variables';
 import Form from '../form/Form';
 
+import useObserver from '../../hooks/useObserver';
+
 function Contacto() {
+  const refObserver = useObserver();
   return (
-    <SectionContacto>
+    <SectionContacto ref={refObserver} id="contacto">
       <TitleSection title={'C'} subtitle={'ontacto'} />
 
       <Wrapper>

@@ -1,10 +1,12 @@
 import styled from 'styled-components';
 import TitleSection from '../TitleSection';
 import * as C from '../../styles/variables';
+import useObserver from '../../hooks/useObserver';
 
 function Servicios() {
+  const refObserver = useObserver();
   return (
-    <SectionServicios>
+    <SectionServicios ref={refObserver} id="servicios">
       <TitleSection title={'S'} subtitle={'ervicios'} />
 
       <WrapperCards>
@@ -50,7 +52,6 @@ function Servicios() {
 }
 
 const SectionServicios = styled.section`
-  width: 100%;
   min-height: 100vh;
 `;
 
