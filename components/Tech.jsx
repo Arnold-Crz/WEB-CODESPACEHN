@@ -93,12 +93,16 @@ const Wrapper = styled.div`
     padding: 20px;
   }
   h2 {
+    text-align: center;
     font-size: 2rem;
     margin-bottom: 1rem;
     margin-top: 2rem;
     color: ${C.COLOR_NEGRO};
     span {
       color: ${C.COLOR_NARANJA};
+    }
+    @media screen, (min-width: 768px) {
+      font-size: 2.5rem;
     }
   }
   .wrapper_imgs {
