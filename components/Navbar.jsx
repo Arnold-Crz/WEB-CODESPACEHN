@@ -15,8 +15,9 @@ function Navbar() {
 
   const listOptions = [
     { text: 'Inicio', route: '#inicio' },
-    { text: 'Servicios', route: '#servicios' },
+    { text: 'Proyectos', route: '#proyectos' },
     { text: 'Planes', route: '#planes' },
+    { text: 'Servicios', route: '#servicios' },
     { text: 'Contacto', route: '#contacto' },
   ];
   return (
@@ -89,8 +90,10 @@ const Header = styled.header`
 
 const MenuCenter = styled.div`
   ul {
+    width: 120%;
     display: flex;
     gap: 20px;
+    transition: 0.5s ease-in-out;
     a {
       color: ${C.COLOR_NEGRO};
       font-weight: 600;
@@ -120,7 +123,6 @@ const MenuCenter = styled.div`
       bottom: -1000px;
       padding: 15px;
       gap: 10px;
-      transition: 0.8s ease-in-out;
 
       &.active {
         bottom: 50px;

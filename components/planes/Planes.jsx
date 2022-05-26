@@ -3,12 +3,10 @@ import styled from 'styled-components';
 import { PLANES_DATA } from '../../data/dataPlanes';
 import TitleSection from '../TitleSection';
 import * as C from '../../styles/variables';
-import useObserver from '../../hooks/useObserver';
 
 function Planes() {
-  const refObserver = useObserver();
   return (
-    <SectionPlanes ref={refObserver} id="planes">
+    <SectionPlanes id="planes">
       <TitleSection title={'P'} subtitle={'lanes'} />
 
       <WrapperCards>

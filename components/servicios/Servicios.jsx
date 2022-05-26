@@ -1,12 +1,10 @@
 import styled from 'styled-components';
 import TitleSection from '../TitleSection';
 import * as C from '../../styles/variables';
-import useObserver from '../../hooks/useObserver';
 
 function Servicios() {
-  const refObserver = useObserver();
   return (
-    <SectionServicios ref={refObserver} id="servicios">
+    <SectionServicios id="servicios">
       <TitleSection title={'S'} subtitle={'ervicios'} />
 
       <WrapperCards>

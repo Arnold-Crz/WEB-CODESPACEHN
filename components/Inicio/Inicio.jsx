@@ -7,12 +7,10 @@ import img from '../../public/img/imginicio.png';
 import css from '../../public/img/cssinicio.svg';
 import html from '../../public/img/htmlinicio.svg';
 import js from '../../public/img/jsinicio.svg';
-import useObserver from '../../hooks/useObserver';
 
 function Inicio() {
-  const refObserver = useObserver();
   return (
-    <SectionInicio ref={refObserver} id="inicio">
+    <SectionInicio id="inicio">
       <div className="wrapperleft">
         <h1>
           Desarrollo <span>Web</span>
