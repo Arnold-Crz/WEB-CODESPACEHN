@@ -4,7 +4,7 @@ import * as C from '../../styles/variables';
 
 function Servicios() {
   return (
-    <SectionServicios>
+    <SectionServicios id="servicios">
       <TitleSection title={'S'} subtitle={'ervicios'} />
 
       <WrapperCards>
@@ -50,7 +50,6 @@ function Servicios() {
 }
 
 const SectionServicios = styled.section`
-  width: 100%;
   min-height: 100vh;
 `;
 

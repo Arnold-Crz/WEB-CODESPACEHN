@@ -10,7 +10,7 @@ import js from '../../public/img/jsinicio.svg';
 
 function Inicio() {
   return (
-    <Wrappersection id="inicio">
+    <SectionInicio id="inicio">
       <div className="wrapperleft">
         <h1>
           Desarrollo <span>Web</span>
@@ -59,11 +59,11 @@ function Inicio() {
           </a>
         </div>
       </WrapperImg>
-    </Wrappersection>
+    </SectionInicio>
   );
 }
 
-const Wrappersection = styled.section`
+const SectionInicio = styled.section`
   min-height: 100vh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);

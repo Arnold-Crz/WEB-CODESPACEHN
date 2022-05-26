@@ -6,7 +6,7 @@ import * as C from '../../styles/variables';
 
 function Planes() {
   return (
-    <SectionPlanes>
+    <SectionPlanes id="planes">
       <TitleSection title={'P'} subtitle={'lanes'} />
 
       <WrapperCards>
@@ -108,6 +108,11 @@ const WrapperCards = styled.div`
         background-color: ${C.COLOR_NEGRO};
         margin-bottom: 20px;
         padding: 5px;
+        transition: 0.5s;
+        &:hover {
+          color: ${C.COLOR_BLANCO};
+          background-color: ${C.COLOR_NARANJA};
+        }
       }
     }
 

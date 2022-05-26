@@ -5,7 +5,7 @@ import Form from '../form/Form';
 
 function Contacto() {
   return (
-    <SectionContacto>
+    <SectionContacto id="contacto">
       <TitleSection title={'C'} subtitle={'ontacto'} />
 
       <Wrapper>

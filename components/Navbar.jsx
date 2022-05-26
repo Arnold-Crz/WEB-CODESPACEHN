@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import styled from 'styled-components';
 import * as C from '../styles/variables';
@@ -7,6 +7,28 @@ import * as C from '../styles/variables';
 import MenuHamburguesa from './MenuHamburguesa';
 
 function Navbar() {
+  const observerNav = () => {
+    const sections = document.querySelectorAll('section[id]');
+    sections.forEach((section) => {
+      const sectionHeight = section.offsetHeight,
+        sectionTop = section.offsetTop - 100;
+
+      let navItem = document.querySelector(`a[href="#${section.id}"]`);
+
+      if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+        navItem.classList.add('active');
+      } else {
+        navItem.classList.remove('active');
+      }
+    });
+  };
+  useEffect(() => {
+    window.addEventListener('scroll', observerNav);
+    return () => {
+      window.removeEventListener('scroll', observerNav);
+    };
+  }, []);
+
   const [click, setClick] = useState(false);
 
   const handleClick = () => {
@@ -15,8 +37,9 @@ function Navbar() {
 
   const listOptions = [
     { text: 'Inicio', route: '#inicio' },
-    { text: 'Servicios', route: '#servicios' },
+    { text: 'Proyectos', route: '#proyectos' },
     { text: 'Planes', route: '#planes' },
+    { text: 'Servicios', route: '#servicios' },
     { text: 'Contacto', route: '#contacto' },
   ];
   return (
@@ -89,12 +112,17 @@ const Header = styled.header`
 
 const MenuCenter = styled.div`
   ul {
+    width: 120%;
     display: flex;
     gap: 20px;
+    transition: 0.5s ease-in-out;
     a {
       color: ${C.COLOR_NEGRO};
       font-weight: 600;
       &:hover {
+        color: ${C.COLOR_NARANJA};
+      }
+      &.active {
         color: ${C.COLOR_NARANJA};
       }
     }
@@ -117,7 +145,6 @@ const MenuCenter = styled.div`
       bottom: -1000px;
       padding: 15px;
       gap: 10px;
-      transition: 0.8s ease-in-out;
 
       &.active {
         bottom: 50px;
