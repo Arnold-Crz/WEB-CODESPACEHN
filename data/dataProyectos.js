@@ -1,4 +1,4 @@
-export const dataUltimosProyectos = [
+export const DATA_PROYECTOS = [
   {
     id: 1,
     imgs: [
@@ -64,21 +64,5 @@ export const dataUltimosProyectos = [
     titulo: 'Diseño Web Dental 🦷 ',
     descripcion:
       'EL diseño busca cubir lo que una reposteria puede ofrecer, con el objetivo que pueda hacer sus reservaciones, agregar productos al carrito, filtrar productos, etc.',
-  },
-];
-
-export const dataProyectos = [
-  {
-    id: 1,
-    imgs: [
-      {
-        prmeraimg: '',
-        segundaImg: '',
-        terceraImg: '',
-        cuartaImg: '',
-      },
-    ],
-    title: 'Proyecto 1',
-    descripcion: '',
   },
 ];
