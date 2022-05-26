@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import styled from 'styled-components';
 import * as C from '../styles/variables';
@@ -7,6 +7,28 @@ import * as C from '../styles/variables';
 import MenuHamburguesa from './MenuHamburguesa';
 
 function Navbar() {
+  const observerNav = () => {
+    const sections = document.querySelectorAll('section[id]');
+    sections.forEach((section) => {
+      const sectionHeight = section.offsetHeight,
+        sectionTop = section.offsetTop - 100;
+
+      let navItem = document.querySelector(`a[href="#${section.id}"]`);
+
+      if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+        navItem.classList.add('active');
+      } else {
+        navItem.classList.remove('active');
+      }
+    });
+  };
+  useEffect(() => {
+    window.addEventListener('scroll', observerNav);
+    return () => {
+      window.removeEventListener('scroll', observerNav);
+    };
+  }, []);
+
   const [click, setClick] = useState(false);
 
   const handleClick = () => {
