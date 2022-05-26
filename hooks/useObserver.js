@@ -4,13 +4,12 @@ const useObserver = () => {
   const refObserver = useRef(null);
 
   useEffect(() => {
-    let observer;
     const callback = (entries) => {
       entries.forEach((entry) => {
         let navElement = document.querySelector(
           `a[href="#${entry.target.id}"]`
         );
-        if (entry.isIntersecting && !navElement.classList.contains('active')) {
+        if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
           navElement.classList.add('active');
         } else {
           if (navElement.classList.contains('active')) {
@@ -21,15 +20,17 @@ const useObserver = () => {
     };
 
     const options = {
-      rootMargin: '0px 0px 0px -100px',
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.5,
     };
 
-    observer = new IntersectionObserver(callback, options);
+    const observer = new IntersectionObserver(callback, options);
 
     observer.observe(refObserver.current);
-  });
+  }, [refObserver]);
 
-  return refObserver;
+  return { refObserver };
 };
 
 export default useObserver;
