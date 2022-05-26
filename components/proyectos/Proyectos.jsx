@@ -1,20 +1,20 @@
-import styled from 'styled-components';
 import Image from 'next/image';
+import styled from 'styled-components';
+
 import TitleSection from '../TitleSection';
 import * as C from '../../styles/variables';
-import { dataUltimosProyectos } from '../../data/dataProyectos';
-
 import Proyecto from './Proyecto';
 
-function Proyectos() {
+function Proyectos({ data }) {
   return (
     <SectionProyectos id="proyectos">
       <TitleSection title={'P'} subtitle={'royectos'}></TitleSection>
       <h3>Ultimos Proyectos</h3>
       <WrapperCards>
-        {dataUltimosProyectos.map((proyecto, index) => (
-          <Proyecto key={index} proyecto={proyecto} />
-        ))}
+        {data &&
+          data.map((proyecto) => (
+            <Proyecto key={proyecto.id} proyecto={proyecto} />
+          ))}
       </WrapperCards>
 
       <WrapperCardsWorks>
@@ -160,4 +160,5 @@ const WrapperCard = styled.div`
     }
   }
 `;
+
 export default Proyectos;
