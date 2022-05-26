@@ -54,7 +54,12 @@ const WrapperCard = styled.div`
       border-radius: 15px;
       text-transform: uppercase;
       font-weight: 600;
+      transition: 0.3s;
+      &:hover {
+        background-color: ${C.COLOR_NARANJA_HOVER};
+      }
     }
   }
 `;
+
 export default Proyecto;
