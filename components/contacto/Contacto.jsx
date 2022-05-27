@@ -27,7 +27,7 @@ function Contacto() {
                   className="bx bxs-phone"
                   style={{ color: '#fffcfc', fontSize: '1.5rem' }}
                 ></i>
-                <a href="tel:3303-8039">+504 3303-8039</a>
+                <a href="tel:9814-5165">+504 9814-5165</a>
               </div>
               <div>
                 <i
@@ -48,8 +48,8 @@ function Contacto() {
                   className="bx bxl-whatsapp"
                   style={{ color: '#fffcfc', fontSize: '1.5rem' }}
                 ></i>
-                <a href="https://api.whatsapp.com/send/?phone=50433038039&text=👋Hola Buen dia. Estoy interes@ en trabajar juntos, en un proyecto. 🚀">
-                  +504 3303-8039
+                <a href="https://api.whatsapp.com/send/?phone=50498145165&text=👋Hola Buen dia. Estoy interes@ en trabajar juntos, en un proyecto. 🚀">
+                  +504 9814-5165
                 </a>
               </div>
             </div>

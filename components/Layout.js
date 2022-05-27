@@ -1,6 +1,6 @@
 import Head from 'next/head';
+import Contacto from './contacto/Contacto';
 import Footer from './footer/Footer';
-import Navbar from './Navbar';
 
 function Layout({ children, title }) {
   return (
@@ -37,8 +37,8 @@ function Layout({ children, title }) {
           content="Desarrollo y Diseño de paginas web profesionales en todo Honduras, tiendas online, paginas webs informativas, paginas web de sevicios, e-commerce"
         />
       </Head>
-      <Navbar />
       {children}
+      <Contacto />
       <Footer />
     </>
   );
