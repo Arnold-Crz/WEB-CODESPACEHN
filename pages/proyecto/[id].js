@@ -4,6 +4,7 @@ import Layout from '../../components/Layout';
 import styled from 'styled-components';
 import * as C from '../../styles/variables';
 
+import Link from 'next/link';
 import Image from 'next/image';
 
 function ProjectPage({ data }) {
@@ -24,7 +25,12 @@ function ProjectPage({ data }) {
           <span>{TXT_END}</span>
         </h1>
         <p>{descripcion}</p>
-        <a href="#">Cotizar</a>
+        <WrappersBtn>
+          <a href="#">Cotizar</a>
+          <Link href="/">
+            <a>Inicio</a>
+          </Link>
+        </WrappersBtn>
         <div className="d_uno">
           <Image
             src={'/decoradores/decorador_uno.svg'}
@@ -122,19 +128,7 @@ const Wrapper = styled.div`
     width: 80%;
     font-size: 1.5rem;
   }
-  a {
-    display: flex;
-    justify-content: center;
-    width: 200px;
-    border-radius: 15px;
-    margin-top: 10px;
-    background-color: ${C.COLOR_BLANCCO_PURO};
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    color: ${C.COLOR_NARANJA};
-    font-size: 1.5rem;
-    font-weight: 600;
-  }
+
   .d_uno,
   .d_dos {
     position: absolute;
@@ -154,6 +148,29 @@ const Wrapper = styled.div`
     top: 0;
     width: 350px;
     height: 500px;
+  }
+`;
+
+const WrappersBtn = styled.div`
+  display: flex;
+  justify-content: space-between;
+  a {
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    border-radius: 15px;
+    margin-top: 10px;
+    background-color: ${C.COLOR_BLANCCO_PURO};
+    border: 3px solid ${C.COLOR_BLANCCO_PURO};
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    color: ${C.COLOR_NARANJA};
+    font-size: 1.5rem;
+    font-weight: 600;
+    transition: 0.3s;
+    &:hover {
+      border: 3px solid ${C.COLOR_NARANJA};
+    }
   }
 `;
 
