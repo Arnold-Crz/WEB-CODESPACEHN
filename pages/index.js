@@ -7,7 +7,7 @@ import Planes from '../components/planes/Planes';
 import Proyectos from '../components/proyectos/Proyectos';
 import SectionQuestions from '../components/SectionQuestions';
 
-import { getUltimeItems } from '../helper/getItems';
+import { getLastProjects } from '../helper';
 
 export default function App({ data }) {
   return (
@@ -24,7 +24,7 @@ export default function App({ data }) {
 }
 
 export async function getStaticProps() {
-  const data = await getUltimeItems();
+  const data = await getLastProjects();
   return {
     props: {
       data,

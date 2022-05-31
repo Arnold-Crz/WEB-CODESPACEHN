@@ -17,7 +17,7 @@ export const DATA_PROYECTOS = [
           'https://res.cloudinary.com/dr9rlr5vi/image/upload/v1653537192/CodeSpace/diseno_Medicina/Desktop_-_6clinica_vurqan.png',
       },
     ],
-    titulo: 'Diseño Web Clinica 👩‍⚕️',
+    titulo: 'Diseño Web Clinica',
     descripcion:
       'EL diseño busca cubir las diferentes servicios, que una clinica puede ofrecer. Entre otras seciones mas.',
   },
@@ -39,7 +39,7 @@ export const DATA_PROYECTOS = [
           'https://res.cloudinary.com/dr9rlr5vi/image/upload/v1653535239/CodeSpace/Pasteleria/Desktop_-_5_zmqkjr.png',
       },
     ],
-    titulo: 'Diseño Web Reposteria 🍰 ',
+    titulo: 'Diseño Web Reposteria',
     descripcion:
       'EL diseño busca cubir lo que una reposteria puede ofrecer, con el objetivo que pueda hacer sus reservaciones, agregar productos al carrito, filtrar productos, etc.',
   },
@@ -61,7 +61,7 @@ export const DATA_PROYECTOS = [
           'https://res.cloudinary.com/dr9rlr5vi/image/upload/v1653538142/CodeSpace/clinica-dental/img-5_qlqtvf.png',
       },
     ],
-    titulo: 'Diseño Web Dental 🦷 ',
+    titulo: 'Diseño Web Dental',
     descripcion:
       'EL diseño busca cubir lo que una reposteria puede ofrecer, con el objetivo que pueda hacer sus reservaciones, agregar productos al carrito, filtrar productos, etc.',
   },
