@@ -1,6 +1,7 @@
 export const DATA_PROYECTOS = [
   {
     id: 1,
+    tipoContenido: 'diseño',
     imgs: [
       {
         primeraImg:
@@ -23,6 +24,7 @@ export const DATA_PROYECTOS = [
   },
   {
     id: 2,
+    tipoContenido: 'diseño',
     imgs: [
       {
         primeraImg:
@@ -45,6 +47,7 @@ export const DATA_PROYECTOS = [
   },
   {
     id: 3,
+    tipoContenido: 'diseño',
     imgs: [
       {
         primeraImg:

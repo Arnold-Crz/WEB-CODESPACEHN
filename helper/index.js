@@ -5,6 +5,12 @@ export async function getProjects() {
   return data;
 }
 
+export async function getProjectFromTypeDesings() {
+  const data = await getProjects();
+  const desings = data.filter((item) => item.tipoContenido === 'diseño');
+  return desings;
+}
+
 export async function getLastProjects() {
   const items = await getProjects();
   return items.slice(0, 3);

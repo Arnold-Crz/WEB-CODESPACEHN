@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import styled from 'styled-components';
 
 import TitleSection from '../TitleSection';
@@ -30,9 +31,11 @@ function Proyectos({ data }) {
           <div className="hover_modal">
             <div>
               <h2>Ver Proyectos</h2>
-              <a href="/proyectos">
-                <i className="bx bx-link"></i>
-              </a>
+              <Link href="/proyectos">
+                <a>
+                  <i className="bx bx-link"></i>
+                </a>
+              </Link>
             </div>
           </div>
         </WrapperCard>
@@ -48,9 +51,11 @@ function Proyectos({ data }) {
           <div className="hover_modal">
             <div>
               <h2>Ver Diseños</h2>
-              <a href="/diseños">
-                <i className="bx bx-link"></i>
-              </a>
+              <Link href="/desings">
+                <a>
+                  <i className="bx bx-link"></i>
+                </a>
+              </Link>
             </div>
           </div>
         </WrapperCard>
