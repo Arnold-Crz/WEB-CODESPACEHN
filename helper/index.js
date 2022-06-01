@@ -10,6 +10,11 @@ export async function getProjectFromTypeDesings() {
   const desings = data.filter((item) => item.tipoContenido === 'diseño');
   return desings;
 }
+export async function getProjectFromTypeDesarrollo() {
+  const data = await getProjects();
+  const desarrollo = data.filter((item) => item.tipoContenido === 'desarrollo');
+  return desarrollo;
+}
 
 export async function getLastProjects() {
   const items = await getProjects();

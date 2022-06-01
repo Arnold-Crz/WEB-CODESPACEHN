@@ -2,23 +2,24 @@ import styled from 'styled-components';
 
 import Layout from '../components/Layout';
 import Proyecto from '../components/proyectos/Proyecto';
-import { getProjectFromTypeDesings } from '../helper';
+import { getProjectFromTypeDesarrollo } from '../helper';
 
 import * as C from '../styles/variables';
 
-function diseños({ desings }) {
+function Desarrollo({ desarrollo }) {
   return (
     <Layout title="Los mejores diseños web para construir pagina">
-      <H1>Diseños Web</H1>
+      <H1>Desarrollo Web</H1>
       <P>
-        En esta sección podrás ver una lista de todos los diseños de páginas web
-        disponibles. Y si estas interesado en otro diseño nos lo puedes hacer
-        saber, contactando con nosotros. 😊{' '}
+        En esta sección podrás ver una lista de algunos de los Diseños Web ya
+        construidos y listos para produccion. Y si estas interesado en que
+        Diseñemos y construyamos tu Pagina Web, nos lo puedes hacer saber,
+        contactando con nosotros. 😊{' '}
       </P>
       <WrapperCards>
-        {desings.map((desing) => (
-          <div className="wrapper_content" key={desing.id}>
-            <Proyecto proyecto={desing} />
+        {desarrollo.map((desarrollo) => (
+          <div className="wrapper_content" key={desarrollo.id}>
+            <Proyecto proyecto={desarrollo} />
           </div>
         ))}
       </WrapperCards>
@@ -61,12 +62,12 @@ const WrapperCards = styled.div`
 `;
 
 export async function getStaticProps() {
-  const data = await getProjectFromTypeDesings();
+  const data = await getProjectFromTypeDesarrollo();
   return {
     props: {
-      desings: data,
+      desarrollo: data,
     },
   };
 }
 
-export default diseños;
+export default Desarrollo;

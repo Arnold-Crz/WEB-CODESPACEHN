@@ -82,6 +82,38 @@ function Tech() {
             height={95}
           />
         </SwiperSlide>
+        <SwiperSlide>
+          <Image
+            src="/img/carroselvite.svg"
+            alt="carroselfigma"
+            width={95}
+            height={95}
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Image
+            src="/img/carroselrouter.svg"
+            alt="carroselfigma"
+            width={95}
+            height={95}
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Image
+            src="/img/carroselsass.svg"
+            alt="carroselfigma"
+            width={95}
+            height={95}
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Image
+            src="/img/carroselstyled.svg"
+            alt="carroselfigma"
+            width={95}
+            height={95}
+          />
+        </SwiperSlide>
       </Swiper>
     </Wrapper>
   );

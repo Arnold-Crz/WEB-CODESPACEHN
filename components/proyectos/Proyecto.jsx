@@ -6,10 +6,18 @@ import ProyectoImgs from './ProyectoImgs';
 import { convertToPath } from '../../helper';
 
 function Proyecto({ proyecto }) {
+  const { width, height } = proyecto.sizeImg;
+
   return (
     <WrapperCard>
-      {proyecto.imgs.map((image, index) => (
-        <ProyectoImgs key={index} image={image} title={proyecto.titulo} />
+      {proyecto.imgs.map((image) => (
+        <ProyectoImgs
+          key={proyecto.id}
+          image={image}
+          title={proyecto.titulo}
+          width={width}
+          height={height}
+        />
       ))}
       <div className="Wrapper">
         <h2>{proyecto.titulo}</h2>

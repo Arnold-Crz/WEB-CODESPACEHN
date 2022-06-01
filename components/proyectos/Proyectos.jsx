@@ -31,7 +31,7 @@ function Proyectos({ data }) {
           <div className="hover_modal">
             <div>
               <h2>Ver Proyectos</h2>
-              <Link href="/proyectos">
+              <Link href="/desarrollo">
                 <a>
                   <i className="bx bx-link"></i>
                 </a>

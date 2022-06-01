@@ -5,26 +5,28 @@ import { Pagination } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-function ProyectoImgs({ image, title }) {
+function ProyectoImgs({ image, title, width, height }) {
   const { primeraImg, segundaImg, terceraImg, cuartaImg, quintaImg, sextaImg } =
     image;
+
   return (
     <Swiper pagination={true} modules={[Pagination]} className="card_slider">
       <SwiperSlide>
         <Image
           src={primeraImg}
           alt={title}
-          width={300}
-          height={250}
+          width={width}
+          height={height}
           layout="responsive"
+          priority="true"
         />
       </SwiperSlide>
       <SwiperSlide>
         <Image
           src={segundaImg}
           alt={title}
-          width={300}
-          height={250}
+          width={width}
+          height={height}
           layout="responsive"
         />
       </SwiperSlide>
@@ -32,8 +34,8 @@ function ProyectoImgs({ image, title }) {
         <Image
           src={terceraImg}
           alt={title}
-          width={300}
-          height={250}
+          width={width}
+          height={height}
           layout="responsive"
         />
       </SwiperSlide>
@@ -41,8 +43,8 @@ function ProyectoImgs({ image, title }) {
         <Image
           src={cuartaImg}
           alt={title}
-          width={300}
-          height={250}
+          width={width}
+          height={height}
           layout="responsive"
         />
       </SwiperSlide>
@@ -50,8 +52,8 @@ function ProyectoImgs({ image, title }) {
         <Image
           src={quintaImg}
           alt={title}
-          width={300}
-          height={250}
+          width={width}
+          height={height}
           layout="responsive"
         />
       </SwiperSlide>
@@ -59,8 +61,8 @@ function ProyectoImgs({ image, title }) {
         <Image
           src={sextaImg}
           alt={title}
-          width={300}
-          height={250}
+          width={width}
+          height={height}
           layout="responsive"
         />
       </SwiperSlide>
