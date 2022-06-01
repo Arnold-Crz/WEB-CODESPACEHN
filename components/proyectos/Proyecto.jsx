@@ -1,17 +1,30 @@
+import Link from 'next/link';
 import styled from 'styled-components';
 import * as C from '../../styles/variables';
 import ProyectoImgs from './ProyectoImgs';
 
+import { convertToPath } from '../../helper';
+
 function Proyecto({ proyecto }) {
+  const { width, height } = proyecto.sizeImg;
+
   return (
     <WrapperCard>
-      {proyecto.imgs.map((img, index) => (
-        <ProyectoImgs key={index} img={img} />
+      {proyecto.imgs.map((image) => (
+        <ProyectoImgs
+          key={proyecto.id}
+          image={image}
+          title={proyecto.titulo}
+          width={width}
+          height={height}
+        />
       ))}
       <div className="Wrapper">
         <h2>{proyecto.titulo}</h2>
         <p>{proyecto.descripcion}</p>
-        <a href="#">Ver Proyecto</a>
+        <Link href={`/proyecto/${convertToPath(proyecto.titulo)}`}>
+          <a>Ver Proyecto</a>
+        </Link>
       </div>
     </WrapperCard>
   );

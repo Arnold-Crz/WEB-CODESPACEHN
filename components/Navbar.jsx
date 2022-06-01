@@ -16,9 +16,9 @@ function Navbar() {
       let navItem = document.querySelector(`a[href="#${section.id}"]`);
 
       if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-        navItem.classList.add('active');
+        navItem?.classList?.add('active');
       } else {
-        navItem.classList.remove('active');
+        navItem?.classList?.remove('active');
       }
     });
   };

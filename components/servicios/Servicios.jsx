@@ -1,6 +1,8 @@
+import Link from 'next/link';
+
 import styled from 'styled-components';
-import TitleSection from '../TitleSection';
 import * as C from '../../styles/variables';
+import TitleSection from '../TitleSection';
 
 function Servicios() {
   return (
@@ -18,7 +20,9 @@ function Servicios() {
             Diseñamos tu pagina web con las herramientas adecuadas para tu
             negocio. brindandote una web elegante y moderna{' '}
           </p>
-          <a href="">Leer mas</a>
+          <Link href="/servicios/diseno-web-profesional-honduras">
+            <a>Leer mas</a>
+          </Link>
         </div>
         <div className="cards">
           <h2>Desarrollo Web</h2>
@@ -30,7 +34,9 @@ function Servicios() {
             Desarrollamos páginas web profesionales, rápidas y modernas que
             cumplen los estándares de calidad y requisitos de Google{' '}
           </p>
-          <a href="">Leer mas</a>
+          <Link href="/servicios/desarrollo-web-profesional-honduras">
+            <a>Leer mas</a>
+          </Link>
         </div>
         <div className="cards">
           <h2>Soporte Web</h2>
@@ -42,7 +48,9 @@ function Servicios() {
             Brindamos soporte y Administracion para aquellas paginas web que
             nesecitas darle un cambio de diseño, funcionalidad y mantenimiento
           </p>
-          <a href="">Leer mas</a>
+          <Link href="/servicios/soporte-web-profesional-honduras">
+            <a>Leer mas</a>
+          </Link>
         </div>
       </WrapperCards>
     </SectionServicios>
