@@ -1,10 +1,10 @@
 export const PLANES_DATA = [
   {
-    /* Precio 8000 */
+    /* Precio 5000 */
     id: '1',
     titulo: 'Landing Page',
     subtitulo:
-      'Si estas por comenzar un emprendimiento y no sabes por donde empezar, empiece por nuestro paquete basico que incluye las herramientas necesarias para tu negocio',
+      'Si estas por comenzar un emprendimiento y no sabes por dónde empezar, empiece por nuestro paquete básico que incluye las herramientas necesarias para tu negocio adaptable a un solo dispositivo el que usted guste.',
     boton: 'Cotizar Proyecto',
     link: 'https://api.whatsapp.com/send/?phone=50498145165&text=Hola Buen dia. estoy interes@ en trabajar juntos para la elaboracion de una página del plan landing page 🚀',
     beneficios: [
@@ -16,11 +16,11 @@ export const PLANES_DATA = [
 
       'Diseño UI / UX',
 
-      'Adaptable móviles',
+      'Adaptable móviles o Desktop',
 
       '4 secciones',
 
-      'Galeria con 7 imagenes',
+      'Galería con 7 imágenes',
 
       'Datos de contacto',
 
@@ -36,7 +36,7 @@ export const PLANES_DATA = [
     id: '2',
     titulo: 'Prémium',
     subtitulo:
-      'Perfecto para negocios ya establecidos que buscan incluirse en el mundo digital, ya sea para promocionar un producto o brindar un servicio',
+      'Perfecto para negocios ya establecidos que buscan incluirse en el mundo digital, ya sea para promocionar un producto o brindar un servicio. Adaptable para las diferentes pantallas movil y desktop.',
     boton: 'Cotizar Proyecto',
     link: 'https://api.whatsapp.com/send/?phone=50498145165&text=Hola Buen dia. estoy interes@ en trabajar juntos para la elaboracion de una página del plan premium 🚀',
     beneficios: [
@@ -50,11 +50,13 @@ export const PLANES_DATA = [
 
       'Adaptable móviles | desktop',
 
+      '10 Productos',
+
       '5 secciones',
 
-      '2 paginas',
+      '2 páginas',
 
-      'Galeria con 20 imagenes',
+      'Galería con 20 imágenes',
 
       'Datos de contacto',
 
@@ -62,7 +64,7 @@ export const PLANES_DATA = [
 
       'Backup de la Web',
 
-      'Mapa de ubicacion',
+      'Mapa de ubicación',
     ],
   },
   {
@@ -70,7 +72,7 @@ export const PLANES_DATA = [
     id: '3',
     titulo: 'Empresarial',
     subtitulo:
-      'Si ud es una empresa coorporativa y busca un diseño moderno y un buen rendimiento y le permita llegar a mas clientes y darles una mejor accesibilidad de sus productos o servicios',
+      'Si buscas una Pagina Web o Aplicación moderna adaptable a las diferentes pantallas, móvil desktop, donde ofrezcas una cierta cantidad de productos, o algunos de tus servicios, además de tener tu propio blog donde compartas novedades a tus clientes entre otras características más este plan es para ti. ',
     boton: 'Cotizar Proyecto',
     link: 'https://api.whatsapp.com/send/?phone=50498145165&text=Hola Buen dia. estoy interes@ en trabajar juntos para la elaboracion de una página del plan Empresarial 🚀',
     beneficios: [
@@ -84,11 +86,15 @@ export const PLANES_DATA = [
 
       'Diseño UI / UX',
 
-      '7 secciones',
+      '30 Productos',
 
-      '4 paginas',
+      'Carrito de compras',
 
-      'Gaeria con 30 imagenes',
+      '5 secciones',
+
+      '4 páginas',
+
+      'Galería con 30 imágenes',
 
       'Datos de contacto',
 
@@ -96,7 +102,7 @@ export const PLANES_DATA = [
 
       'Botones de redes sociales',
 
-      'Mapa de ubicacion',
+      'Mapa de ubicación',
 
       'Chat online',
 
@@ -110,7 +116,7 @@ export const PLANES_DATA = [
     id: '4',
     titulo: 'E-commerce',
     subtitulo:
-      'Si estas en busca de un diseño web para tu tienda online, este es el paquete ideal para ti',
+      'Si estas en busca de un tu negocio donde ofrezcas tus productos a tus clientes desde cualquier parte del mundo, este es el paquete ideal para ti, se trabaja el diseño, desarrollo y la implementación, además de adminístrate los productos',
     boton: 'Cotizar Proyecto',
     link: 'https://api.whatsapp.com/send/?phone=50498145165&text=Hola Buen dia. estoy interes@ en trabajar juntos para la elaboracion de una página del plan E-commerce 🚀',
     beneficios: [
@@ -120,23 +126,25 @@ export const PLANES_DATA = [
 
       'Certificado SSL',
 
-      '80 Productos',
+      '100 Productos',
 
-      'metodos de pago',
+      'Carrito de compras',
+
+      'métodos de pago',
 
       'Adaptable móviles | desktop',
 
       'Diseño UI / UX',
 
-      '7 paginas',
+      '7 páginas',
 
-      'Gaeria con 80 imagenes',
+      'Galería con 80 imágenes',
 
       'Datos de contacto',
 
       'Botones de redes sociales',
 
-      'Mapa de ubicacion',
+      'Mapa de ubicación',
 
       'Chat online',
 
