@@ -8,12 +8,12 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 function ProjectPage({ data }) {
-  console.log(data);
   const {
     project: {
       titulo,
       descripcion,
       imgs,
+      demoUrl,
       sizeImg: { width, height },
     },
   } = data;
@@ -33,10 +33,17 @@ function ProjectPage({ data }) {
         <p>{descripcion}</p>
         <WrappersBtn>
           <a
+            rel="noopener noreferrer"
+            target="_blank"
             href={`https://api.whatsapp.com/send/?phone=50498145165&text=👋Hola, Buen dia. Estoy interes@ en el proyecto ${titulo}.🚀`}
           >
             Cotizar
           </a>
+          {demoUrl && (
+            <a rel="noopener noreferrer" target="_blank" href={demoUrl}>
+              Demo
+            </a>
+          )}
           <Link href="/">
             <a>Inicio</a>
           </Link>
@@ -181,7 +188,7 @@ const Wrapper = styled.div`
 const WrappersBtn = styled.div`
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   gap: 10px;
   @media screen and (min-width: 768px) {
     justify-content: space-between;
