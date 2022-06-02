@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { useState, useEffect } from 'react';
 
 import styled from 'styled-components';
@@ -35,13 +36,12 @@ function Navbar() {
     setClick(!click);
   };
 
-  const listOptions = [
-    { text: 'Inicio', route: '#inicio' },
-    { text: 'Proyectos', route: '#proyectos' },
-    { text: 'Planes', route: '#planes' },
-    { text: 'Servicios', route: '#servicios' },
-    { text: 'Contacto', route: '#contacto' },
-  ];
+  const [dropdown, setDropdown] = useState(false);
+
+  const handleDropdown = () => {
+    setDropdown(!dropdown);
+  };
+
   return (
     <Header>
       <nav>
@@ -50,11 +50,39 @@ function Navbar() {
         </div>
         <MenuCenter>
           <ul className={click ? 'active' : ''}>
-            {listOptions.map(({ route, text }, index) => (
-              <a key={index} onClick={handleClick} href={route}>
-                {text}
+            <a className="menu" onClick={handleClick} href="#inicio">
+              Inicio
+            </a>
+            <MenuDropdown>
+              <a className="menu" onClick={handleClick} href="#proyectos">
+                Proyectos
+                <div className={`submenu ${dropdown ? 'active' : ''}`}>
+                  <Link href="/desarrollo">
+                    <a className="submenu_link">Desarrollo</a>
+                  </Link>
+
+                  <Link href="/desings">
+                    <a className="submenu_link">Diseño</a>
+                  </Link>
+                </div>
               </a>
-            ))}
+              <i
+                onClick={handleDropdown}
+                className={`drop_down bx bxs-chevron-down ${
+                  dropdown ? 'active' : ''
+                }`}
+              ></i>
+            </MenuDropdown>
+
+            <a className="menu" onClick={handleClick} href="#planes">
+              Planes
+            </a>
+            <a className="menu" onClick={handleClick} href="#servicios">
+              Servicios
+            </a>
+            <a className="menu" onClick={handleClick} href="#contacto">
+              Contacto
+            </a>
           </ul>
         </MenuCenter>
         <MenuSocial>
@@ -116,7 +144,8 @@ const MenuCenter = styled.div`
     display: flex;
     gap: 20px;
     transition: 0.5s ease-in-out;
-    a {
+
+    .menu {
       color: ${C.COLOR_NEGRO};
       font-weight: 600;
       &:hover {
@@ -168,6 +197,85 @@ const MenuSocial = styled.div`
   }
   i:hover {
     color: ${C.COLOR_NARANJA};
+  }
+`;
+
+const MenuDropdown = styled.div`
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+
+  .drop_down {
+    font-size: 1.1rem;
+    color: ${C.COLOR_CAFE};
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    &.active {
+      transform: rotate(180deg);
+    }
+    @media screen and (max-width: 768px) {
+      &.active {
+        transform: rotate(-90deg);
+      }
+    }
+  }
+
+  .submenu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    border-radius: 10px;
+    top: -200px;
+    left: -25px;
+    width: 150px;
+    background-color: ${C.COLOR_BLANCO};
+    transition: all 0.6s ease-in-out;
+    pointer-events: none;
+    opacity: 0;
+    &.active {
+      top: 50px;
+      opacity: 1;
+      animation-name: fadeIn;
+      animation-fill-mode: forwards;
+      animation-delay: 6ms;
+    }
+    @media screen and (max-width: 768px) {
+      top: 0;
+      left: 300px;
+      width: 120px;
+      height: 100px;
+      &.active {
+        top: 0;
+        left: 110px;
+      }
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    .submenu_link {
+      padding: 10px;
+      color: ${C.COLOR_CAFE};
+      font-size: 0.9rem;
+      pointer-events: painted;
+      :hover {
+        color: ${C.COLOR_NARANJA};
+      }
+    }
   }
 `;
 

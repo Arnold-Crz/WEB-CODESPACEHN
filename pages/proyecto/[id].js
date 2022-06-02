@@ -138,21 +138,24 @@ const Wrapper = styled.div`
   margin-top: 30px;
   h1 {
     text-align: center;
-    font-size: 3.5rem;
+    font-size: 3rem;
     color: ${C.COLOR_NEGRO};
     @media screen and (min-width: 768px) {
       text-align: start;
+      font-size: 3.5rem;
     }
     span {
       color: ${C.COLOR_NARANJA};
     }
   }
   p {
+    padding: 10px;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     @media screen and (min-width: 768px) {
       width: 80%;
       text-align: start;
+      font-size: 1.5rem;
     }
   }
 
@@ -188,15 +191,18 @@ const Wrapper = styled.div`
 const WrappersBtn = styled.div`
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 10px;
   @media screen and (min-width: 768px) {
+    flex-direction: row;
     justify-content: space-between;
   }
   a {
     display: flex;
     justify-content: center;
-    width: 200px;
+    width: 300px;
     border-radius: 15px;
     margin-top: 10px;
     background-color: ${C.COLOR_BLANCCO_PURO};
@@ -207,6 +213,9 @@ const WrappersBtn = styled.div`
     font-size: 1.5rem;
     font-weight: 600;
     transition: 0.3s;
+    @media screen and (min-width: 768px) {
+      width: 200px;
+    }
     &:hover {
       border: 3px solid ${C.COLOR_NARANJA};
     }
