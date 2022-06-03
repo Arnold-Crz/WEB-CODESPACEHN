@@ -118,27 +118,27 @@ const SectionInicio = styled.section`
     }
 
     a {
-      position: relative;
       display: flex;
       justify-content: center;
-      align-items: center;
-      width: 115px;
-      margin-top: 10px;
-      background: ${C.COLOR_NARANJA};
-      padding: 10px;
-      color: ${C.COLOR_BLANCO};
+      width: 120px;
       border-radius: 5px;
-      pointer-events: auto;
-      transition: 0.5s ease-in-out;
-      cursor: pointer;
+      margin-top: 10px;
+      background-color: ${C.COLOR_BLANCCO_PURO};
+      border: 3px solid ${C.COLOR_BLANCCO_PURO};
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+      padding: 10px;
+      color: ${C.COLOR_NARANJA};
+      font-size: 1rem;
+      font-weight: 600;
+      transition: 0.3s;
 
       @media (max-width: 768px) {
         margin-left: 10px;
       }
 
       &:hover {
-        color: ${C.COLOR_BLANCO};
-        background-color: ${C.COLOR_CAFE};
+        border: 3px solid ${C.COLOR_NARANJA};
+        border-radius: 5px;
       }
     }
   }

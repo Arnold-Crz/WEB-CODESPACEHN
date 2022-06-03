@@ -45,7 +45,7 @@ const SectionPlanes = styled.section`
 `;
 
 const WrapperCards = styled.div`
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   margin-top: 20px;
   display: grid;

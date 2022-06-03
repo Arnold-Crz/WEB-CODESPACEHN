@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Contacto from './contacto/Contacto';
+import DropUp from './DropUp';
 import Footer from './footer/Footer';
 
 function Layout({ children, title }) {
@@ -37,6 +38,7 @@ function Layout({ children, title }) {
           content="Desarrollo y Diseño de paginas web profesionales en todo Honduras, tiendas online, paginas webs informativas, paginas web de sevicios, e-commerce"
         />
       </Head>
+      <DropUp />
       {children}
       <Contacto />
       <Footer />

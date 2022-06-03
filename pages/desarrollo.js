@@ -11,7 +11,7 @@ function Desarrollo({ desarrollo }) {
     <Layout title="Los mejores diseños web para construir pagina">
       <H1>Desarrollo Web</H1>
       <P>
-        En esta sección podrás ver una lista de algunos de los Diseños Web ya
+        En esta sección podrás ver una lista de algunos de los Diseños Web, ya
         construidos y listos para produccion. Y si estas interesado en que
         Diseñemos y construyamos tu Pagina Web, nos lo puedes hacer saber,
         contactando con nosotros. 😊{' '}
