@@ -56,15 +56,6 @@ function Navbar() {
             <MenuDropdown>
               <a className="menu" onClick={handleClick} href="#proyectos">
                 Proyectos
-                <div className={`submenu ${dropdown ? 'active' : ''}`}>
-                  <Link href="/desarrollo">
-                    <a className="submenu_link">Desarrollo</a>
-                  </Link>
-
-                  <Link href="/desings">
-                    <a className="submenu_link">Diseño</a>
-                  </Link>
-                </div>
               </a>
               <i
                 onClick={handleDropdown}
@@ -72,6 +63,15 @@ function Navbar() {
                   dropdown ? 'active' : ''
                 }`}
               ></i>
+              <ul className={`submenu ${dropdown ? 'active' : ''}`}>
+                <Link href="/desarrollo">
+                  <a className="submenu_link">Desarrollo</a>
+                </Link>
+
+                <Link href="/desings">
+                  <a className="submenu_link">Diseño</a>
+                </Link>
+              </ul>
             </MenuDropdown>
 
             <a className="menu" onClick={handleClick} href="#planes">
