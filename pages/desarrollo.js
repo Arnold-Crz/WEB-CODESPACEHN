@@ -1,8 +1,10 @@
 import styled from 'styled-components';
-import Link from 'next/link';
 
 import Layout from '../components/Layout';
+
+import Suscribe from '../components/Suscribe';
 import Proyecto from '../components/proyectos/Proyecto';
+
 import { getProjectFromTypeDesarrollo } from '../helper';
 
 import * as C from '../styles/variables';
@@ -17,9 +19,7 @@ function Desarrollo({ desarrollo }) {
         Diseñemos y construyamos tu Pagina Web, nos lo puedes hacer saber,
         contactando con nosotros. 😊{' '}
       </P>
-      <Link href="/">
-        <Btn>Inicio</Btn>
-      </Link>
+      <Suscribe />
       <WrapperCards>
         {desarrollo.map((desarrollo) => (
           <div className="wrapper_content" key={desarrollo.id}>
@@ -52,28 +52,6 @@ const P = styled.p`
   }
 `;
 
-const Btn = styled.a`
-  display: flex;
-  justify-content: center;
-  width: 200px;
-  border-radius: 15px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  background-color: ${C.COLOR_BLANCCO_PURO};
-  border: 3px solid ${C.COLOR_BLANCCO_PURO};
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-  padding: 15px;
-  color: ${C.COLOR_NARANJA};
-  font-size: 1.5rem;
-  font-weight: 600;
-  transition: 0.3s;
-  cursor: pointer;
-
-  &:hover {
-    border: 3px solid ${C.COLOR_NARANJA};
-  }
-`;
-
 const WrapperCards = styled.div`
   width: 100%;
   display: grid;
@@ -81,6 +59,7 @@ const WrapperCards = styled.div`
   justify-content: center;
   align-items: center;
   row-gap: 20px;
+  margin-top: 20px;
   .wrapper_content {
     display: flex;
     justify-content: center;

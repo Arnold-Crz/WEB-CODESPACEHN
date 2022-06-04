@@ -12,8 +12,8 @@ function Suscribe() {
           <Image
             src={'/logosuscribe.png'}
             alt="logo-code-space"
-            height={90}
-            width={85}
+            height={80}
+            width={80}
           />
         </a>
       </Link>
@@ -41,6 +41,7 @@ const Wrapper = styled.div`
   height: 80px;
   margin: 0 auto;
   display: flex;
+  align-items: center;
   background-color: ${C.COLOR_NEGRO};
   border-radius: 15px;
 `;
