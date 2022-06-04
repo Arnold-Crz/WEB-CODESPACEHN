@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Link from 'next/link';
 
 import Layout from '../components/Layout';
 import Proyecto from '../components/proyectos/Proyecto';
@@ -15,6 +16,9 @@ function diseños({ desings }) {
         disponibles. Y si estas interesado en otro diseño nos lo puedes hacer
         saber, contactando con nosotros. 😊{' '}
       </P>
+      <Link href="/">
+        <Btn>Inicio</Btn>
+      </Link>
       <WrapperCards>
         {desings.map((desing) => (
           <div className="wrapper_content" key={desing.id}>
@@ -44,6 +48,28 @@ const P = styled.p`
   @media screen and (min-width: 768px) {
     width: 80%;
     text-align: start;
+  }
+`;
+
+const Btn = styled.a`
+  display: flex;
+  justify-content: center;
+  width: 200px;
+  border-radius: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: ${C.COLOR_BLANCCO_PURO};
+  border: 3px solid ${C.COLOR_BLANCCO_PURO};
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  color: ${C.COLOR_NARANJA};
+  font-size: 1.5rem;
+  font-weight: 600;
+  transition: 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    border: 3px solid ${C.COLOR_NARANJA};
   }
 `;
 
