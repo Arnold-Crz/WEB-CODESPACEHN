@@ -19,16 +19,32 @@ function Suscribe() {
       </Link>
 
       <Social>
-        <a href="https://api.whatsapp.com/send/?phone=50498145165&text=👋Hola Buen dia. Estoy interes@ en trabajar juntos, en un proyecto. 🚀">
+        <a
+          href="https://api.whatsapp.com/send/?phone=50498145165&text=👋Hola Buen dia. Estoy interes@ en trabajar juntos, en un proyecto. 🚀"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <i className="bx bxl-whatsapp"></i>
         </a>
-        <a href="https://www.facebook.com/codespacehn/">
+        <a
+          href="https://www.facebook.com/codespacehn/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <i className="bx bxl-facebook"></i>
         </a>
-        <a href="https://github.com/Arnold-Crz">
+        <a
+          href="https://github.com/Arnold-Crz"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <i className="bx bxl-github"></i>
         </a>
-        <a href="https://www.linkedin.com/in/arnold-cruz-b9aa81204/">
+        <a
+          href="https://www.linkedin.com/in/arnold-cruz-b9aa81204/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <i className="bx bxl-linkedin"></i>
         </a>
       </Social>

@@ -56,16 +56,32 @@ function Inicio() {
         </div>
 
         <div className="wrapper_social">
-          <a href="#">
+          <a
+            href="https://api.whatsapp.com/send/?phone=50498145165&text=👋Hola Buen dia. Estoy interes@ en trabajar juntos, en un proyecto. 🚀"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <i className="bx bxl-whatsapp"></i>
           </a>
-          <a href="#">
+          <a
+            href="https://www.instagram.com/codespace_hn/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <i className="bx bxl-instagram"></i>
           </a>
-          <a href="#">
+          <a
+            href="https://www.linkedin.com/in/arnold-cruz-b9aa81204/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <i className="bx bxl-linkedin"></i>
           </a>
-          <a href="#">
+          <a
+            href="https://github.com/Arnold-Crz"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <i className="bx bxl-github"></i>
           </a>
         </div>

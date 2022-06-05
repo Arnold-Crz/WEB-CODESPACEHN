@@ -86,13 +86,25 @@ function Navbar() {
           </ul>
         </MenuCenter>
         <MenuSocial>
-          <a href="https://api.whatsapp.com/send/?phone=50433038039&text=👋Hola Buen dia. Estoy interes@ en trabajar juntos, en un proyecto. 🚀">
+          <a
+            href="https://api.whatsapp.com/send/?phone=50433038039&text=👋Hola Buen dia. Estoy interes@ en trabajar juntos, en un proyecto. 🚀"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <i className="bx bxl-whatsapp"></i>
           </a>
-          <a href="https://www.facebook.com/codespacehn/">
+          <a
+            href="https://www.facebook.com/codespacehn/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <i className="bx bxl-facebook-circle"></i>
           </a>
-          <a href="https://www.instagram.com/codespace_hn/">
+          <a
+            href="https://www.instagram.com/codespace_hn/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <i className="bx bxl-instagram"></i>
           </a>
         </MenuSocial>
