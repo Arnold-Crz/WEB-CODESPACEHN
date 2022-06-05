@@ -1,16 +1,32 @@
 import Link from 'next/link';
-
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import * as C from '../../styles/variables';
 import TitleSection from '../TitleSection';
 
 function Servicios() {
+  const variant = {
+    offscreen: {
+      y: -100,
+      opacity: 0,
+    },
+    onscreen: {
+      y: 10,
+      opacity: 1,
+      transition: {
+        type: 'spring',
+        bounce: 0.4,
+        duration: 0.8,
+      },
+    },
+  };
+
   return (
     <SectionServicios id="servicios">
       <TitleSection title={'S'} subtitle={'ervicios'} />
 
-      <WrapperCards>
-        <div className="cards">
+      <WrapperCards initial="offscreen" whileInView="onscreen">
+        <motion.div variants={variant} className="cards">
           <h2>Diseño Web</h2>
           <i
             className="bx bx-layout"
@@ -23,8 +39,8 @@ function Servicios() {
           <Link href="/servicios/diseno-web-profesional-honduras">
             <a>Leer mas</a>
           </Link>
-        </div>
-        <div className="cards">
+        </motion.div>
+        <motion.div variants={variant} className="cards">
           <h2>Desarrollo Web</h2>
           <i
             className="bx bx-code-alt"
@@ -37,8 +53,8 @@ function Servicios() {
           <Link href="/servicios/desarrollo-web-profesional-honduras">
             <a>Leer mas</a>
           </Link>
-        </div>
-        <div className="cards">
+        </motion.div>
+        <motion.div variants={variant} className="cards">
           <h2>Soporte Web</h2>
           <i
             className="bx bx-devices"
@@ -51,7 +67,7 @@ function Servicios() {
           <Link href="/servicios/soporte-web-profesional-honduras">
             <a>Leer mas</a>
           </Link>
-        </div>
+        </motion.div>
       </WrapperCards>
     </SectionServicios>
   );
@@ -61,7 +77,7 @@ const SectionServicios = styled.section`
   min-height: 100vh;
 `;
 
-const WrapperCards = styled.div`
+const WrapperCards = styled(motion.div)`
   display: flex;
   gap: 50px;
   justify-content: center;

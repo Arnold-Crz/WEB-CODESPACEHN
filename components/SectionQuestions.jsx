@@ -1,16 +1,37 @@
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import styled from 'styled-components';
 
 import * as C from '../styles/variables';
 
 function SectionQuestions() {
+  const variant = {
+    offscreen: {
+      y: -100,
+      opacity: 0,
+    },
+    onscreen: {
+      y: 10,
+      opacity: 1,
+      transition: {
+        type: 'spring',
+        bounce: 0.4,
+        duration: 0.8,
+      },
+    },
+  };
+
   return (
     <SectionQuestion>
       <h2>
         ¿Por que nesecitas una<span> Pagina Web?</span>
       </h2>
-      <div className="wrapper_cards">
-        <div className="wrapper_card">
+      <motion.div
+        initial="offscreen"
+        whileInView="onscreen"
+        className="wrapper_cards"
+      >
+        <motion.div variants={variant} className="wrapper_card">
           <Image
             src={'/img/q_personas.png'}
             alt={'personas'}
@@ -23,8 +44,8 @@ function SectionQuestions() {
             alcanzar mas clientes y tener una mejor comunicacion con el al
             exponerle tus productos.
           </p>
-        </div>
-        <div className="wrapper_card">
+        </motion.div>
+        <motion.div variants={variant} className="wrapper_card">
           <Image
             src={'/img/q_trofeo.png'}
             alt={'personas'}
@@ -36,8 +57,8 @@ function SectionQuestions() {
             Es una forma que permite ofrecer mejor tus productos y servicios y
             que mas publico conozca tu trabajo o lo que haces
           </p>
-        </div>
-        <div className="wrapper_card">
+        </motion.div>
+        <motion.div variants={variant} className="wrapper_card">
           <Image
             src={'/img/q_movil.png'}
             alt={'personas'}
@@ -49,8 +70,8 @@ function SectionQuestions() {
             Permite a tu publico tener una mejor experiencia al ver con mayor
             facilidad tu catalogo de productos entre mucha mas informacion.
           </p>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </SectionQuestion>
   );
 }

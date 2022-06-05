@@ -1,5 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
+
 import styled from 'styled-components';
 
 import TitleSection from '../TitleSection';
@@ -7,14 +9,28 @@ import * as C from '../../styles/variables';
 import Proyecto from './Proyecto';
 
 function Proyectos({ data }) {
+  const variant = {
+    offscreen: {
+      opacity: 0,
+    },
+    onscreen: {
+      opacity: 1,
+      transition: {
+        duration: 1,
+        ease: 'easeInOut',
+        duration: 0.8,
+      },
+    },
+  };
+
   return (
     <SectionProyectos id="proyectos">
       <TitleSection title={'P'} subtitle={'royectos'}></TitleSection>
       <h3>Ultimos Proyectos</h3>
-      <WrapperCards>
+      <WrapperCards initial="offscreen" whileInView="onscreen">
         {data &&
           data.map((proyecto) => (
-            <Proyecto key={proyecto.id} proyecto={proyecto} />
+            <Proyecto variant={variant} key={proyecto.id} proyecto={proyecto} />
           ))}
       </WrapperCards>
 
@@ -75,7 +91,7 @@ const SectionProyectos = styled.section`
   }
 `;
 
-const WrapperCards = styled.div`
+const WrapperCards = styled(motion.div)`
   margin-top: 30px;
   width: 100%;
   display: grid;

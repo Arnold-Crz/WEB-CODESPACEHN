@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+
 import styled from 'styled-components';
 import * as C from '../styles/variables';
 
@@ -21,13 +23,18 @@ function DropUp() {
   }, []);
 
   return (
-    <DropUpStyled className={visible ? 'active' : ''} onClick={handleClick}>
+    <DropUpStyled
+      whileHover={{ scale: 1.2 }}
+      whileTap={{ scale: 0.9 }}
+      className={visible ? 'active' : ''}
+      onClick={handleClick}
+    >
       <i className="bx bxs-chevron-up"></i>
     </DropUpStyled>
   );
 }
 
-const DropUpStyled = styled.div`
+const DropUpStyled = styled(motion.div)`
   position: fixed;
   bottom: -50px;
   right: 10px;

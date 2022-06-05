@@ -1,5 +1,7 @@
 import Image from 'next/image';
 
+import { motion } from 'framer-motion';
+
 import styled from 'styled-components';
 import * as C from '../../styles/variables';
 
@@ -11,7 +13,12 @@ import js from '../../public/img/jsinicio.svg';
 function Inicio() {
   return (
     <SectionInicio id="inicio">
-      <div className="wrapperleft">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="wrapperleft"
+      >
         <h1>
           Desarrollo <span>Web</span>
           <br />
@@ -24,8 +31,12 @@ function Inicio() {
           Brindandote los mejores servicios para tu negocio
         </p>
         <a href="#contacto">Contacto</a>
-      </div>
-      <WrapperImg>
+      </motion.div>
+      <WrapperImg
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
         <Image
           placeholder="blur"
           property="true"
@@ -144,7 +155,7 @@ const SectionInicio = styled.section`
   }
 `;
 
-const WrapperImg = styled.div`
+const WrapperImg = styled(motion.div)`
   position: relative;
   width: 500px;
   @media (max-width: 768px) {

@@ -1,15 +1,17 @@
 import Link from 'next/link';
+import { motion } from 'framer-motion';
+
 import styled from 'styled-components';
 import * as C from '../../styles/variables';
 import ProyectoImgs from './ProyectoImgs';
 
 import { convertToPath } from '../../helper';
 
-function Proyecto({ proyecto }) {
+function Proyecto({ proyecto, variant }) {
   const { width, height } = proyecto.sizeImg;
 
   return (
-    <WrapperCard>
+    <WrapperCard variants={variant}>
       {proyecto.imgs.map((image) => (
         <ProyectoImgs
           key={proyecto.id}
@@ -30,7 +32,7 @@ function Proyecto({ proyecto }) {
   );
 }
 
-const WrapperCard = styled.div`
+const WrapperCard = styled(motion.div)`
   width: 80%;
   padding: 20px;
   border-radius: 15px;
