@@ -23,8 +23,8 @@ export default function App({ data }) {
   );
 }
 
-export async function getStaticProps() {
-  const data = await getLastProjects();
+export function getStaticProps() {
+  const data = getLastProjects();
   return {
     props: {
       data,

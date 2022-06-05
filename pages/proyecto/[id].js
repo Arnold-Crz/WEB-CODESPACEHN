@@ -253,8 +253,8 @@ const WrapperImgs = styled.div`
   }
 `;
 
-export async function getStaticPaths() {
-  const paths = await getProjectFromTitle();
+export function getStaticPaths() {
+  const paths = getProjectFromTitle();
 
   return {
     paths,
@@ -262,10 +262,10 @@ export async function getStaticPaths() {
   };
 }
 
-export async function getStaticProps({ params }) {
+export function getStaticProps({ params }) {
   const id = params.id;
 
-  const data = await getProject(id);
+  const data = getProject(id);
 
   return {
     props: {

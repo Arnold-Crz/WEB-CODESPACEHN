@@ -65,8 +65,8 @@ const WrapperCards = styled.div`
   }
 `;
 
-export async function getStaticProps() {
-  const data = await getProjectFromTypeDesings();
+export function getStaticProps() {
+  const data = getProjectFromTypeDesings();
   return {
     props: {
       desings: data,

@@ -1,28 +1,28 @@
-export async function getProjects() {
-  const url = `${process.env.API_URL}/api/items`;
-  const response = await fetch(url);
-  const data = await response.json();
+import { DATA_PROYECTOS } from '../data/dataProyectos';
+
+export function getProjects() {
+  const data = DATA_PROYECTOS;
   return data;
 }
 
-export async function getProjectFromTypeDesings() {
-  const data = await getProjects();
+export function getProjectFromTypeDesings() {
+  const data = getProjects();
   const desings = data.filter((item) => item.tipoContenido === 'diseño');
   return desings;
 }
-export async function getProjectFromTypeDesarrollo() {
-  const data = await getProjects();
+export function getProjectFromTypeDesarrollo() {
+  const data = getProjects();
   const desarrollo = data.filter((item) => item.tipoContenido === 'desarrollo');
   return desarrollo;
 }
 
-export async function getLastProjects() {
-  const items = await getProjects();
+export function getLastProjects() {
+  const items = getProjects();
   return items.slice(0, 3);
 }
 
-export async function getProjectFromTitle() {
-  const items = await getProjects();
+export function getProjectFromTitle() {
+  const items = getProjects();
   return items.map((item) => {
     return {
       params: {
@@ -32,8 +32,8 @@ export async function getProjectFromTitle() {
   });
 }
 
-export async function getProject(id) {
-  const projects = await getProjects();
+export function getProject(id) {
+  const projects = getProjects();
   const project = projects.find((item) => convertToPath(item.titulo) === id);
   return {
     project,

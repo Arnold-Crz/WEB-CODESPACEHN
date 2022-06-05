@@ -133,6 +133,6 @@ export const DATA_PROYECTOS = [
     titulo: 'Desarrollo Web Comida Rapida',
     descripcion:
       'Esta es una aplicacion web que permite a los usuario hacer pedidos, ver los pedidos realizados, agregar al carrito, eliminarlos y hacer el pedido por Whatsapp ver los productos disponibles, etc.',
-    demoUrl: 'https://comidarapida.netlify.app/',
+    demoUrl: 'https://lacapitalina.netlify.app',
   },
 ];
