@@ -1,5 +1,5 @@
 export async function getProjects() {
-  const url = 'http://localhost:3000/api/items';
+  const url = `${process.env.API_URL}/api/items`;
   const response = await fetch(url);
   const data = await response.json();
   return data;
