@@ -18,6 +18,12 @@ export const DATA_PROYECTOS = [
           'https://res.cloudinary.com/dr9rlr5vi/image/upload/v1654103558/CodeSpace/joyeria/Slice_4_pkv8lu.png',
       },
     ],
+    mockup: {
+      completeImg:
+        'https://res.cloudinary.com/dr9rlr5vi/image/upload/v1654485647/CodeSpace/joyeria/Frame_16_aksjiw.png',
+      logo: 'https://res.cloudinary.com/dr9rlr5vi/image/upload/v1654483136/CodeSpace/logo_nzufnt.png',
+      colorScroll: '#fc5b00',
+    },
     sizeImg: {
       width: 1500,
       height: 1100,
@@ -45,6 +51,12 @@ export const DATA_PROYECTOS = [
           'https://res.cloudinary.com/dr9rlr5vi/image/upload/v1654103526/CodeSpace/diseno_Medicina/Slice_6_eziq05.png',
       },
     ],
+    mockup: {
+      completeImg:
+        'https://res.cloudinary.com/dr9rlr5vi/image/upload/v1654483152/CodeSpace/diseno_Medicina/medicina_xzfknr.png',
+      logo: 'https://res.cloudinary.com/dr9rlr5vi/image/upload/v1654483136/CodeSpace/logo_nzufnt.png',
+      colorScroll: '#0e63dc',
+    },
     sizeImg: {
       width: 1500,
       height: 1100,
@@ -72,6 +84,12 @@ export const DATA_PROYECTOS = [
           'https://res.cloudinary.com/dr9rlr5vi/image/upload/v1654103573/CodeSpace/Pasteleria/Slice_7_fmvaxv.png',
       },
     ],
+    mockup: {
+      completeImg:
+        'https://res.cloudinary.com/dr9rlr5vi/image/upload/v1654486491/CodeSpace/Pasteleria/pasteleria_ww9j2m.png',
+      logo: 'https://res.cloudinary.com/dr9rlr5vi/image/upload/v1654483136/CodeSpace/logo_nzufnt.png',
+      colorScroll: '#f62f42',
+    },
     sizeImg: {
       width: 1500,
       height: 1100,
@@ -99,6 +117,12 @@ export const DATA_PROYECTOS = [
           'https://res.cloudinary.com/dr9rlr5vi/image/upload/v1654103543/CodeSpace/clinica-dental/Slice_6_jwwk1d.png',
       },
     ],
+    mockup: {
+      completeImg:
+        'https://res.cloudinary.com/dr9rlr5vi/image/upload/v1654486505/CodeSpace/clinica-dental/clinicaDental_oidl6z.png',
+      logo: 'https://res.cloudinary.com/dr9rlr5vi/image/upload/v1654483136/CodeSpace/logo_nzufnt.png',
+      colorScroll: '#6ab4d9',
+    },
     sizeImg: {
       width: 1500,
       height: 1100,
@@ -113,19 +137,25 @@ export const DATA_PROYECTOS = [
     imgs: [
       {
         primeraImg:
-          'https://res.cloudinary.com/dr9rlr5vi/image/upload/v1654103495/CodeSpace/comida-rapida/Slice_1_acqmb3.png',
+          'https://res.cloudinary.com/dr9rlr5vi/image/upload/v1654489513/CodeSpace/comida-rapida/1_vgbqow.png',
         segundaImg:
-          'https://res.cloudinary.com/dr9rlr5vi/image/upload/v1654103495/CodeSpace/comida-rapida/Slice_2_voyve9.png',
+          'https://res.cloudinary.com/dr9rlr5vi/image/upload/v1654489514/CodeSpace/comida-rapida/2_pcd7mj.png',
         terceraImg:
-          'https://res.cloudinary.com/dr9rlr5vi/image/upload/v1654103495/CodeSpace/comida-rapida/Slice_3_s1mio5.png',
+          'https://res.cloudinary.com/dr9rlr5vi/image/upload/v1654489514/CodeSpace/comida-rapida/3_teawjt.png',
         cuartaImg:
-          'https://res.cloudinary.com/dr9rlr5vi/image/upload/v1654103494/CodeSpace/comida-rapida/Slice_4_r2wefe.png',
+          'https://res.cloudinary.com/dr9rlr5vi/image/upload/v1654489514/CodeSpace/comida-rapida/4_thtlyp.png',
         quintaImg:
-          'https://res.cloudinary.com/dr9rlr5vi/image/upload/v1654103495/CodeSpace/comida-rapida/Slice_5_cd4fmy.png',
+          'https://res.cloudinary.com/dr9rlr5vi/image/upload/v1654489514/CodeSpace/comida-rapida/5_qguwd4.png',
         sextaImg:
-          'https://res.cloudinary.com/dr9rlr5vi/image/upload/v1654103495/CodeSpace/comida-rapida/Slice_5_cd4fmy.png',
+          'https://res.cloudinary.com/dr9rlr5vi/image/upload/v1654489514/CodeSpace/comida-rapida/6_ohvoam.png',
       },
     ],
+    mockup: {
+      completeImg:
+        'https://res.cloudinary.com/dr9rlr5vi/image/upload/v1654489506/CodeSpace/comida-rapida/completo_gntxsd.png',
+      logo: 'https://res.cloudinary.com/dr9rlr5vi/image/upload/v1654483136/CodeSpace/logo_nzufnt.png',
+      colorScroll: '#fe1618',
+    },
     sizeImg: {
       width: 360,
       height: 780,

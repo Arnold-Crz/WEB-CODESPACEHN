@@ -6,6 +6,7 @@ import * as C from '../../styles/variables';
 
 import Link from 'next/link';
 import Image from 'next/image';
+import MockupPc from '../../components/MockupPc';
 
 function ProjectPage({ data }) {
   const {
@@ -15,6 +16,7 @@ function ProjectPage({ data }) {
       imgs,
       demoUrl,
       sizeImg: { width, height },
+      mockup: { completeImg, logo, colorScroll },
     },
   } = data;
 
@@ -128,6 +130,12 @@ function ProjectPage({ data }) {
             </ul>
           </div>
         </WrapperImgs>
+
+        <MockupPc
+          completeImg={completeImg}
+          logo={logo}
+          colorScroll={colorScroll}
+        />
       </Wrapper>
     </Layout>
   );
