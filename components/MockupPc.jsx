@@ -4,7 +4,7 @@ import LoaderMockup from './LoaderMockup';
 
 function MockupPc({ completeImg, logo, colorScroll }) {
   return (
-    <Container>
+    <Content>
       <Case>
         <Camera>
           <Lente></Lente>
@@ -34,11 +34,11 @@ function MockupPc({ completeImg, logo, colorScroll }) {
           />
         </Logo>
       </Base>
-    </Container>
+    </Content>
   );
 }
 
-const Container = styled.div`
+const Content = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -56,8 +56,8 @@ const Case = styled.div`
   height: 500px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  border: 5px solid #f2ebe9;
-  background-color: #c6dce4;
+  background-image: linear-gradient(144deg, #f67d0e, #f6580e 50%, #f6ad0e);
+  border: 5px solid #fff;
 `;
 
 const Screen = styled.div`
@@ -99,9 +99,9 @@ const Camera = styled.div`
 
 const Lente = styled.div`
   position: absolute;
-  top: 5px;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateY(-50%);
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -110,10 +110,10 @@ const Lente = styled.div`
 
 const Base = styled.div`
   position: absolute;
-  bottom: 20px;
+  bottom: 40px;
   left: 50%;
   transform: translate(-50%, 0);
-  width: 85%;
+  width: 950px;
   height: 50px;
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;

@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { getProject, getProjectFromTitle } from '../../helper';
 import Layout from '../../components/Layout';
 
@@ -7,8 +8,28 @@ import * as C from '../../styles/variables';
 import Link from 'next/link';
 import Image from 'next/image';
 import MockupPc from '../../components/MockupPc';
+import MockupMovil from '../../components/MockupMovil';
 
 function ProjectPage({ data }) {
+  const [screen, setScreen] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = () => {
+      const media = window.matchMedia('(min-width: 768px)');
+      if (media.matches) {
+        setScreen(true);
+      } else {
+        setScreen(false);
+      }
+    };
+    mediaQuery();
+    window.addEventListener('resize', mediaQuery);
+
+    return () => {
+      window.removeEventListener('resize', mediaQuery);
+    };
+  }, []);
+
   const {
     project: {
       titulo,
@@ -16,7 +37,8 @@ function ProjectPage({ data }) {
       imgs,
       demoUrl,
       sizeImg: { width, height },
-      mockup: { completeImg, logo, colorScroll },
+      mockupPc: { img, logo, colorScroll },
+      mockupMovil: { img1, img2 },
     },
   } = data;
 
@@ -64,6 +86,27 @@ function ProjectPage({ data }) {
             alt="decorador"
           />
         </div>
+        {screen && (
+          <Container>
+            <Descrption>
+              <h1 className="mockup_title">
+                Demo<span> en laptop</span>{' '}
+              </h1>
+              <p className="mockup_description">
+                Navega por la pantalla del prototipo. Haz scroll en ella, así
+                veras todo el contenido y como se visualizaría en una pantalla
+                real.
+              </p>
+            </Descrption>
+            <MockupPc completeImg={img} logo={logo} colorScroll={colorScroll} />
+          </Container>
+        )}
+        <ContainerMockupMovil>
+          <DescriptionMockupMovil>
+            <h1></h1>
+          </DescriptionMockupMovil>
+          <MockupMovil img1={img1} img2={img2} />
+        </ContainerMockupMovil>
         <WrapperImgs>
           <div className="grid_imgs">
             <ul className="img">
@@ -130,12 +173,6 @@ function ProjectPage({ data }) {
             </ul>
           </div>
         </WrapperImgs>
-
-        <MockupPc
-          completeImg={completeImg}
-          logo={logo}
-          colorScroll={colorScroll}
-        />
       </Wrapper>
     </Layout>
   );
@@ -259,6 +296,60 @@ const WrapperImgs = styled.div`
       }
     }
   }
+`;
+
+const Container = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 50px;
+`;
+
+const Descrption = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 400px;
+  height: 100%;
+  border-radius: 20px;
+  background-color: ${C.COLOR_BLANCCO_PURO};
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+
+  .mockup_title {
+    position: relative;
+    font-size: 2.5rem;
+    color: ${C.COLOR_CAFE};
+    margin-left: 10px;
+    span {
+      background: linear-gradient(144deg, #f67d0e, #f6580e 50%, #f6ad0e);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    ::before {
+      bottom: 0;
+      position: absolute;
+      content: '';
+      width: 100px;
+      height: 5px;
+      background-image: linear-gradient(144deg, #f67d0e, #f6580e 50%, #f6ad0e);
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+  }
+  .mockup_description {
+    font-size: 1rem;
+    color: ${C.COLOR_CAFE};
+  }
+`;
+
+const ContainerMockupMovil = styled.div`
+  width: 100%;
+`;
+
+const DescriptionMockupMovil = styled.div`
+  display: flex;
+  flex-direction: column;
 `;
 
 export function getStaticPaths() {

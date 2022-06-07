@@ -18,11 +18,14 @@ export const DATA_PROYECTOS = [
           'https://res.cloudinary.com/dr9rlr5vi/image/upload/v1654103558/CodeSpace/joyeria/Slice_4_pkv8lu.png',
       },
     ],
-    mockup: {
-      completeImg:
-        'https://res.cloudinary.com/dr9rlr5vi/image/upload/v1654485647/CodeSpace/joyeria/Frame_16_aksjiw.png',
+    mockupPc: {
+      img: 'https://res.cloudinary.com/dr9rlr5vi/image/upload/v1654485647/CodeSpace/joyeria/Frame_16_aksjiw.png',
       logo: 'https://res.cloudinary.com/dr9rlr5vi/image/upload/v1654483136/CodeSpace/logo_nzufnt.png',
       colorScroll: '#fc5b00',
+    },
+    mockupMovil: {
+      img1: 'https://res.cloudinary.com/dr9rlr5vi/image/upload/v1654554180/CodeSpace/comida-rapida/Frame_24_jqjykx.png',
+      img2: 'https://res.cloudinary.com/dr9rlr5vi/image/upload/v1654554177/CodeSpace/comida-rapida/food-2_hvv7fi.png',
     },
     sizeImg: {
       width: 1500,
@@ -51,11 +54,14 @@ export const DATA_PROYECTOS = [
           'https://res.cloudinary.com/dr9rlr5vi/image/upload/v1654103526/CodeSpace/diseno_Medicina/Slice_6_eziq05.png',
       },
     ],
-    mockup: {
-      completeImg:
-        'https://res.cloudinary.com/dr9rlr5vi/image/upload/v1654483152/CodeSpace/diseno_Medicina/medicina_xzfknr.png',
+    mockupPc: {
+      img: 'https://res.cloudinary.com/dr9rlr5vi/image/upload/v1654483152/CodeSpace/diseno_Medicina/medicina_xzfknr.png',
       logo: 'https://res.cloudinary.com/dr9rlr5vi/image/upload/v1654483136/CodeSpace/logo_nzufnt.png',
       colorScroll: '#0e63dc',
+    },
+    mockupMovil: {
+      img1: 'https://res.cloudinary.com/dr9rlr5vi/image/upload/v1654554180/CodeSpace/comida-rapida/Frame_24_jqjykx.png',
+      img2: 'https://res.cloudinary.com/dr9rlr5vi/image/upload/v1654554177/CodeSpace/comida-rapida/food-2_hvv7fi.png',
     },
     sizeImg: {
       width: 1500,
@@ -84,11 +90,14 @@ export const DATA_PROYECTOS = [
           'https://res.cloudinary.com/dr9rlr5vi/image/upload/v1654103573/CodeSpace/Pasteleria/Slice_7_fmvaxv.png',
       },
     ],
-    mockup: {
-      completeImg:
-        'https://res.cloudinary.com/dr9rlr5vi/image/upload/v1654486491/CodeSpace/Pasteleria/pasteleria_ww9j2m.png',
+    mockupPc: {
+      img: 'https://res.cloudinary.com/dr9rlr5vi/image/upload/v1654486491/CodeSpace/Pasteleria/pasteleria_ww9j2m.png',
       logo: 'https://res.cloudinary.com/dr9rlr5vi/image/upload/v1654483136/CodeSpace/logo_nzufnt.png',
       colorScroll: '#f62f42',
+    },
+    mockupMovil: {
+      img1: 'https://res.cloudinary.com/dr9rlr5vi/image/upload/v1654554180/CodeSpace/comida-rapida/Frame_24_jqjykx.png',
+      img2: 'https://res.cloudinary.com/dr9rlr5vi/image/upload/v1654554177/CodeSpace/comida-rapida/food-2_hvv7fi.png',
     },
     sizeImg: {
       width: 1500,
@@ -117,11 +126,14 @@ export const DATA_PROYECTOS = [
           'https://res.cloudinary.com/dr9rlr5vi/image/upload/v1654103543/CodeSpace/clinica-dental/Slice_6_jwwk1d.png',
       },
     ],
-    mockup: {
-      completeImg:
-        'https://res.cloudinary.com/dr9rlr5vi/image/upload/v1654486505/CodeSpace/clinica-dental/clinicaDental_oidl6z.png',
+    mockupPc: {
+      img: 'https://res.cloudinary.com/dr9rlr5vi/image/upload/v1654486505/CodeSpace/clinica-dental/clinicaDental_oidl6z.png',
       logo: 'https://res.cloudinary.com/dr9rlr5vi/image/upload/v1654483136/CodeSpace/logo_nzufnt.png',
       colorScroll: '#6ab4d9',
+    },
+    mockupMovil: {
+      img1: 'https://res.cloudinary.com/dr9rlr5vi/image/upload/v1654554180/CodeSpace/comida-rapida/Frame_24_jqjykx.png',
+      img2: 'https://res.cloudinary.com/dr9rlr5vi/image/upload/v1654554177/CodeSpace/comida-rapida/food-2_hvv7fi.png',
     },
     sizeImg: {
       width: 1500,
@@ -147,14 +159,17 @@ export const DATA_PROYECTOS = [
         quintaImg:
           'https://res.cloudinary.com/dr9rlr5vi/image/upload/v1654489514/CodeSpace/comida-rapida/5_qguwd4.png',
         sextaImg:
-          'https://res.cloudinary.com/dr9rlr5vi/image/upload/v1654489514/CodeSpace/comida-rapida/6_ohvoam.png',
+          'https://res.cloudinary.com/dr9rlr5vi/image/upload/v1654554177/CodeSpace/comida-rapida/food-2_hvv7fi.png',
       },
     ],
-    mockup: {
-      completeImg:
-        'https://res.cloudinary.com/dr9rlr5vi/image/upload/v1654489506/CodeSpace/comida-rapida/completo_gntxsd.png',
+    mockupPc: {
+      img: 'https://res.cloudinary.com/dr9rlr5vi/image/upload/v1654554180/CodeSpace/comida-rapida/Frame_24_jqjykx.png',
       logo: 'https://res.cloudinary.com/dr9rlr5vi/image/upload/v1654483136/CodeSpace/logo_nzufnt.png',
       colorScroll: '#fe1618',
+    },
+    mockupMovil: {
+      img1: 'https://res.cloudinary.com/dr9rlr5vi/image/upload/v1654554180/CodeSpace/comida-rapida/Frame_24_jqjykx.png',
+      img2: 'https://res.cloudinary.com/dr9rlr5vi/image/upload/v1654554177/CodeSpace/comida-rapida/food-2_hvv7fi.png',
     },
     sizeImg: {
       width: 360,
