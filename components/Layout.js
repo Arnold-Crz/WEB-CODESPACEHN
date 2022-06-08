@@ -5,7 +5,7 @@ import Cookies from './Cookies';
 import DropUp from './DropUp';
 import Footer from './footer/Footer';
 
-function Layout({ children, title }) {
+function Layout({ children, title, description }) {
   return (
     <>
       <Head>
@@ -37,7 +37,10 @@ function Layout({ children, title }) {
         <meta name="HandheldFriendly" content="true" />
         <meta
           name="description"
-          content="Desarrollo y Diseño de paginas web profesionales en todo Honduras, tiendas online, paginas webs informativas, paginas web de sevicios, e-commerce"
+          content={`${
+            description ||
+            'Desarrollo y Diseño de paginas web profesionales en todo Honduras, tiendas online, paginas webs informativas, paginas web de sevicios, e-commerce'
+          }`}
         />
       </Head>
       <Cookies />

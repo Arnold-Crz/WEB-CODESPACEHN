@@ -48,7 +48,7 @@ function ProjectPage({ data }) {
   const TXT_START = titulo.slice(0, 11);
   const TXT_END = titulo.slice(11);
   return (
-    <Layout title={titulo}>
+    <Layout title={titulo} description={descripcion}>
       <Wrapper>
         <h1>
           {TXT_START}
@@ -89,23 +89,32 @@ function ProjectPage({ data }) {
         {screen && (
           <Container>
             <Descrption>
-              <h1 className="mockup_title">
+              <h2 className="mockup_title">
                 Demo<span> en laptop</span>{' '}
-              </h1>
+              </h2>
               <p className="mockup_description">
                 Navega por la pantalla del prototipo. Haz scroll en ella, así
                 veras todo el contenido y como se visualizaría en una pantalla
-                real.
+                real. Esta Presentacion no muestra como tal el diseño completo
+                para ello nos puedes comunicar por nuestros medios de contacto.
               </p>
             </Descrption>
             <MockupPc completeImg={img} logo={logo} colorScroll={colorScroll} />
           </Container>
         )}
         <ContainerMockupMovil>
-          <DescriptionMockupMovil>
-            <h1></h1>
-          </DescriptionMockupMovil>
           <MockupMovil img1={img1} img2={img2} />
+          <DescriptionMockupMovil>
+            <h2 className="movil_mockup_title">
+              Prototipo<span>Movil</span>
+            </h2>
+            <p className="movil_mockup_description">
+              Nuestros Desarrollo y Diseño es adaptable tanto para dispositivos
+              grandes como pequeños, en el prototipo se puede observar cómo se
+              representaría y comportaría en un móvil. Puedes hacer scroll y
+              desplazar entre pantallas. 📱
+            </p>
+          </DescriptionMockupMovil>
         </ContainerMockupMovil>
         <WrapperImgs>
           <div className="grid_imgs">
@@ -302,15 +311,19 @@ const Container = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
+  place-content: center;
+  align-items: center;
   margin-top: 50px;
 `;
 
 const Descrption = styled.div`
+  position: relative;
+  left: -50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 400px;
-  height: 100%;
+  height: 500px;
   border-radius: 20px;
   background-color: ${C.COLOR_BLANCCO_PURO};
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
@@ -338,18 +351,72 @@ const Descrption = styled.div`
     }
   }
   .mockup_description {
+    width: 100%;
+    margin-top: 20px;
     font-size: 1rem;
     color: ${C.COLOR_CAFE};
+    line-height: 1.5rem;
   }
 `;
 
 const ContainerMockupMovil = styled.div`
   width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+  margin: 50px 0;
+
+  @media screen and (min-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const DescriptionMockupMovil = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  border-radius: 20px;
+  background-color: ${C.COLOR_BLANCCO_PURO};
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+
+  .movil_mockup_title {
+    position: relative;
+    font-size: 2.5rem;
+    color: ${C.COLOR_CAFE};
+    margin-left: 10px;
+    margin-top: 10px;
+    @media screen and (min-width: 768px) {
+      margin-left: 20px;
+    }
+    span {
+      background: linear-gradient(144deg, #f67d0e, #f6580e 50%, #f6ad0e);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    ::before {
+      bottom: 0;
+      position: absolute;
+      content: '';
+      width: 100px;
+      height: 5px;
+      background-image: linear-gradient(144deg, #f67d0e, #f6580e 50%, #f6ad0e);
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+  }
+
+  .movil_mockup_description {
+    font-size: 1rem;
+    color: ${C.COLOR_CAFE};
+    line-height: 1.5rem;
+    margin: 20px 0;
+    @media screen and (min-width: 768px) {
+      margin-left: 20px;
+    }
+  }
 `;
 
 export function getStaticPaths() {
