@@ -1,17 +1,20 @@
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-
 import styled from 'styled-components';
-import * as C from '../../styles/variables';
+
 import ProyectoImgs from './ProyectoImgs';
 
-import { convertToPath } from '../../helper';
+import * as C from '../../styles/variables';
 
-function Proyecto({ proyecto, variant }) {
+import { convertToPath } from '../../helper';
+import useScroll from '../../hooks/useScroll';
+
+function Proyecto({ proyecto }) {
+  const { animationScroll } = useScroll();
+
   const { width, height } = proyecto.sizeImg;
 
   return (
-    <WrapperCard variants={variant}>
+    <WrapperCard className={`${animationScroll}`}>
       {proyecto.imgs.map((image) => (
         <ProyectoImgs
           key={proyecto.id}
@@ -32,7 +35,7 @@ function Proyecto({ proyecto, variant }) {
   );
 }
 
-const WrapperCard = styled(motion.div)`
+const WrapperCard = styled.div`
   width: 80%;
   padding: 20px;
   border-radius: 15px;

@@ -5,7 +5,7 @@ import Servicios from '../components/servicios/Servicios';
 import Tech from '../components/Tech';
 import Planes from '../components/planes/Planes';
 import Proyectos from '../components/proyectos/Proyectos';
-import SectionQuestions from '../components/SectionQuestions';
+import Questions from '../components/questions/Questions';
 
 import { getLastProjects } from '../helper';
 
@@ -14,7 +14,7 @@ export default function App({ data }) {
     <Layout title="Principal">
       <Navbar />
       <Inicio />
-      <SectionQuestions />
+      <Questions />
       <Tech />
       <Proyectos data={data} />
       <Planes />

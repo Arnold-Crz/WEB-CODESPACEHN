@@ -1,36 +1,23 @@
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+
 import styled from 'styled-components';
+import useScroll from '../../hooks/useScroll';
+
 import * as C from '../../styles/variables';
 import TitleSection from '../TitleSection';
 
 function Servicios() {
-  const variant = {
-    offscreen: {
-      y: -100,
-      opacity: 0,
-    },
-    onscreen: {
-      y: 10,
-      opacity: 1,
-      transition: {
-        type: 'spring',
-        bounce: 0.4,
-        duration: 0.8,
-      },
-    },
-  };
-
+  const { animationScroll } = useScroll();
   return (
     <SectionServicios id="servicios">
       <TitleSection title={'S'} subtitle={'ervicios'} />
 
-      <WrapperCards initial="offscreen" whileInView="onscreen">
-        <motion.div variants={variant} className="cards">
+      <WrapperCards>
+        <div className={` cards ${animationScroll}`}>
           <h2>Diseño Web</h2>
           <i
             className="bx bx-layout"
-            style={{ color: '#fffcfc', fontSize: '5.5rem' }}
+            style={{ color: '#403f3f', fontSize: '5.5rem' }}
           ></i>
           <p>
             Diseñamos tu pagina web con las herramientas adecuadas para tu
@@ -39,12 +26,12 @@ function Servicios() {
           <Link href="/servicios/diseno-web-profesional-honduras">
             <a>Leer mas</a>
           </Link>
-        </motion.div>
-        <motion.div variants={variant} className="cards">
+        </div>
+        <div className={` cards ${animationScroll}`}>
           <h2>Desarrollo Web</h2>
           <i
             className="bx bx-code-alt"
-            style={{ color: '#fffcfc', fontSize: '5.5rem' }}
+            style={{ color: '#403f3f', fontSize: '5.5rem' }}
           ></i>
           <p>
             Desarrollamos páginas web profesionales, rápidas y modernas que
@@ -53,12 +40,12 @@ function Servicios() {
           <Link href="/servicios/desarrollo-web-profesional-honduras">
             <a>Leer mas</a>
           </Link>
-        </motion.div>
-        <motion.div variants={variant} className="cards">
+        </div>
+        <div className={` cards ${animationScroll}`}>
           <h2>Soporte Web</h2>
           <i
             className="bx bx-devices"
-            style={{ color: '#fffcfc', fontSize: '5.5rem' }}
+            style={{ color: '#403f3f', fontSize: '5.5rem' }}
           ></i>
           <p>
             Brindamos soporte y Administracion para aquellas paginas web que
@@ -67,7 +54,7 @@ function Servicios() {
           <Link href="/servicios/soporte-web-profesional-honduras">
             <a>Leer mas</a>
           </Link>
-        </motion.div>
+        </div>
       </WrapperCards>
     </SectionServicios>
   );
@@ -77,19 +64,21 @@ const SectionServicios = styled.section`
   min-height: 100vh;
 `;
 
-const WrapperCards = styled(motion.div)`
+const WrapperCards = styled.div`
   display: flex;
   gap: 50px;
   justify-content: center;
   margin-top: 50px;
-  @media (max-width: 425px) {
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
   }
 
   .cards {
-    background-color: ${C.COLOR_NEGRO};
+    background-color: ${C.COLOR_BLANCCO_PURO};
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     width: 300px;
     height: 400px;
     display: flex;
@@ -122,8 +111,12 @@ const WrapperCards = styled(motion.div)`
     }
 
     & p {
-      color: ${C.COLOR_BLANCO};
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
       margin-top: 20px;
+      font-size: 1rem;
     }
 
     & a {

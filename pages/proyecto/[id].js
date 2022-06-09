@@ -318,7 +318,7 @@ const Container = styled.div`
 
 const Descrption = styled.div`
   position: relative;
-  left: -50px;
+  left: -20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -365,7 +365,7 @@ const ContainerMockupMovil = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
   padding: 0 20px;
-  margin: 50px 0;
+  margin: 100px 0;
 
   @media screen and (min-width: 768px) {
     width: 100%;

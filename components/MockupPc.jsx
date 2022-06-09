@@ -52,7 +52,7 @@ const Case = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 800px;
+  width: 750px;
   height: 500px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -62,7 +62,7 @@ const Case = styled.div`
 
 const Screen = styled.div`
   margin: 0 auto;
-  width: 98%;
+  width: 95%;
   height: 440px;
   background-color: #333;
   overflow-y: auto;
@@ -117,18 +117,16 @@ const Base = styled.div`
   height: 50px;
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
-  background-color: #e9e9e9;
+  background-image: linear-gradient(144deg, #f67d0e, #f6580e 50%, #f6ad0e);
   border: 3px solid #fff;
 `;
 
 const Logo = styled.div`
   position: absolute;
-  top: 0;
+  top: 50%;
   left: 50%;
-  transform: translate(-50%, 0);
-  img {
-    width: 40px;
-  }
+  transform: translate(-50%, -50%);
+  height: 40px;
 `;
 
 export default MockupPc;

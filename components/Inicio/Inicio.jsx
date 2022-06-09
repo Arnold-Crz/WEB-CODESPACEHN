@@ -9,16 +9,14 @@ import img from '../../public/img/imginicio.png';
 import css from '../../public/img/cssinicio.svg';
 import html from '../../public/img/htmlinicio.svg';
 import js from '../../public/img/jsinicio.svg';
+import useScroll from '../../hooks/useScroll';
 
 function Inicio() {
+  const { animationScroll } = useScroll();
+
   return (
     <SectionInicio id="inicio">
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-        className="wrapperleft"
-      >
+      <div className={` wrapperleft ${animationScroll}`}>
         <h1>
           Desarrollo <span>Web</span>
           <br />
@@ -31,12 +29,8 @@ function Inicio() {
           Brindandote los mejores servicios para tu negocio
         </p>
         <a href="#contacto">Contacto</a>
-      </motion.div>
-      <WrapperImg
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-      >
+      </div>
+      <WrapperImg className={`${animationScroll}`}>
         <Image
           placeholder="blur"
           property="true"
