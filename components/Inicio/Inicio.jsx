@@ -24,7 +24,7 @@ function Inicio() {
           Hola👋, en Code<span>Space</span>.
         </h2>
         <p>
-          Diseñamos y desarrollamos Páginas Web profesionales a la medida de la
+          Diseñamos y Desarrollamos Páginas Web profesionales a la medida de la
           más alta calidad.
           <br />
           Brindándote los mejores servicios para tu negocio.
