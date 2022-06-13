@@ -20,11 +20,14 @@ function Inicio() {
           <br />
           Profesional
         </h1>
+        <h2>
+          Hola👋, en Code<span>Space</span>.
+        </h2>
         <p>
-          Diseñamos y desarrollamos paginas web <br />
-          profesionales de la mas alta calidad.
+          Diseñamos y desarrollamos Páginas Web profesionales a la medida de la
+          más alta calidad.
           <br />
-          Brindandote los mejores servicios para tu negocio
+          Brindándote los mejores servicios para tu negocio.
         </p>
         <a href="#contacto">Contacto</a>
       </div>
@@ -104,11 +107,29 @@ const SectionInicio = styled.section`
         font-size: 3rem;
         line-height: 45px;
         margin-bottom: 20px;
-        color: ${C.COLOR_NEGRO};
+        color: ${C.COLOR_CAFE};
       }
 
       & span {
-        color: ${C.COLOR_NARANJA};
+        background: linear-gradient(144deg, #f67d0e, #f6580e 40%, #f6ad0e);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    h2 {
+      color: ${C.COLOR_CAFE};
+      margin: 10px 0;
+      margin-left: 25px;
+      @media screen and (min-width: 768px) {
+        margin-left: 0;
+      }
+      span {
+        background: linear-gradient(144deg, #f67d0e, #f6580e 40%, #f6ad0e);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
       }
     }
 
@@ -121,7 +142,7 @@ const SectionInicio = styled.section`
       @media (max-width: 768px) {
         padding: 5px;
         margin-left: 25px;
-        font-size: 1.1rem;
+        font-size: 1rem;
       }
 
       &::after {
@@ -133,6 +154,10 @@ const SectionInicio = styled.section`
         height: 75px;
         background-color: ${C.COLOR_NARANJA};
         border-radius: 3px;
+
+        @media screen and (max-width: 768px) {
+          height: 100px;
+        }
       }
     }
 
