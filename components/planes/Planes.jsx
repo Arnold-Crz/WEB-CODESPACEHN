@@ -62,7 +62,7 @@ const WrapperCards = styled.div`
       position: relative;
       text-align: center;
       text-transform: uppercase;
-      color: ${C.COLOR_NARANJA};
+      color: ${C.COLOR_BLANCCO_PURO};
       font-size: 2.5rem;
       z-index: 1;
       margin-top: 10px;
@@ -80,14 +80,14 @@ const WrapperCards = styled.div`
       content: '';
       width: 100%;
       height: 100px;
-      background-color: ${C.COLOR_NEGRO};
+      background-color: ${C.COLOR_NARANJA};
       border-radius: 0 0 100% 100%;
     }
     p {
       padding: 10px;
-      text-align: center;
+      text-align: start;
       color: ${C.COLOR_NEGRO};
-      font-size: 1.1rem;
+      font-size: 1rem;
       margin-bottom: 20px;
     }
 
@@ -99,19 +99,20 @@ const WrapperCards = styled.div`
       a {
         display: flex;
         justify-content: center;
-        align-items: center;
         border-radius: 15px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        background-color: ${C.COLOR_BLANCCO_PURO};
+        border: 3px solid ${C.COLOR_BLANCCO_PURO};
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+        padding: 10px;
         color: ${C.COLOR_NARANJA};
-        width: 150px;
-        height: 50px;
         font-size: 1rem;
-        background-color: ${C.COLOR_NEGRO};
-        margin-bottom: 20px;
-        padding: 5px;
-        transition: 0.5s;
+        font-weight: 600;
+        transition: 0.3s;
         &:hover {
-          color: ${C.COLOR_BLANCO};
-          background-color: ${C.COLOR_NARANJA};
+          border: 3px solid ${C.COLOR_NARANJA};
+          border-radius: 5px;
         }
       }
     }

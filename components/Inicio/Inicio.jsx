@@ -1,7 +1,5 @@
 import Image from 'next/image';
 
-import { motion } from 'framer-motion';
-
 import styled from 'styled-components';
 import * as C from '../../styles/variables';
 
@@ -165,7 +163,7 @@ const SectionInicio = styled.section`
   }
 `;
 
-const WrapperImg = styled(motion.div)`
+const WrapperImg = styled.div`
   position: relative;
   width: 500px;
   @media (max-width: 768px) {
