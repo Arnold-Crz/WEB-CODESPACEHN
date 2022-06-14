@@ -15,7 +15,8 @@
     "react-gtm-module": "2.0.11",
     "scrollreveal": "^4.0.9",
     "styled-components": "5.3.5",
-    "swiper": "8.1.5"
+    "swiper": "8.1.5",
+    "typeit-react": "2.5.0"
   },
   "devDependencies": {
     "eslint": "8.15.0",

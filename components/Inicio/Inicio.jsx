@@ -1,36 +1,23 @@
 import Image from 'next/image';
-
 import styled from 'styled-components';
+
 import * as C from '../../styles/variables';
+
+import useScroll from '../../hooks/useScroll';
 
 import img from '../../public/img/imginicio.png';
 import css from '../../public/img/cssinicio.svg';
 import html from '../../public/img/htmlinicio.svg';
 import js from '../../public/img/jsinicio.svg';
-import useScroll from '../../hooks/useScroll';
+import ContentLeft from './ContentLeft';
 
 function Inicio() {
   const { animationScroll } = useScroll();
 
   return (
     <SectionInicio id="inicio">
-      <div className={` wrapperleft ${animationScroll}`}>
-        <h1>
-          Desarrollo <span>Web</span>
-          <br />
-          Profesional
-        </h1>
-        <h2>
-          Hola👋, en Code<span>Space</span>.
-        </h2>
-        <p>
-          Diseñamos y Desarrollamos Páginas Web profesionales a la medida de la
-          más alta calidad.
-          <br />
-          Brindándote los mejores servicios para tu negocio.
-        </p>
-        <a href="#contacto">Contacto</a>
-      </div>
+      <ContentLeft />
+
       <WrapperImg className={`${animationScroll}`}>
         <Image
           placeholder="blur"
@@ -96,95 +83,6 @@ const SectionInicio = styled.section`
   @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
-  }
-
-  .wrapperleft {
-    h1 {
-      font-size: 2.8rem;
-
-      @media (max-width: 768px) {
-        text-align: center;
-        font-size: 3rem;
-        line-height: 45px;
-        margin-bottom: 20px;
-        color: ${C.COLOR_CAFE};
-      }
-
-      & span {
-        background: linear-gradient(144deg, #f67d0e, #f6580e 40%, #f6ad0e);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-    }
-
-    h2 {
-      color: ${C.COLOR_CAFE};
-      margin: 10px 0;
-      margin-left: 25px;
-      @media screen and (min-width: 768px) {
-        margin-left: 0;
-      }
-      span {
-        background: linear-gradient(144deg, #f67d0e, #f6580e 40%, #f6ad0e);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-    }
-
-    p {
-      position: relative;
-      font-size: 1.1rem;
-      font-weight: 400;
-      color: ${C.COLOR_NEGRO};
-
-      @media (max-width: 768px) {
-        padding: 5px;
-        margin-left: 25px;
-        font-size: 1rem;
-      }
-
-      &::after {
-        content: '';
-        position: absolute;
-        left: -15px;
-        top: 0;
-        width: 5px;
-        height: 75px;
-        background-color: ${C.COLOR_NARANJA};
-        border-radius: 3px;
-
-        @media screen and (max-width: 768px) {
-          height: 100px;
-        }
-      }
-    }
-
-    a {
-      display: flex;
-      justify-content: center;
-      width: 120px;
-      border-radius: 5px;
-      margin-top: 10px;
-      background-color: ${C.COLOR_BLANCCO_PURO};
-      border: 3px solid ${C.COLOR_BLANCCO_PURO};
-      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-      padding: 10px;
-      color: ${C.COLOR_NARANJA};
-      font-size: 1rem;
-      font-weight: 600;
-      transition: 0.3s;
-
-      @media (max-width: 768px) {
-        margin-left: 10px;
-      }
-
-      &:hover {
-        border: 3px solid ${C.COLOR_NARANJA};
-        border-radius: 5px;
-      }
-    }
   }
 `;
 
